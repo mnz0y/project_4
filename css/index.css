@@ -1,0 +1,44 @@
+#slider {
+  height: 650px;
+  background-color: azure;
+}
+
+#content1 {
+  height: 100px;
+  background-color: bisque;
+}
+
+#content2 {
+  height: 600px;
+  background-color: burlywood;
+}
+
+#content3 {
+  height: 200px;
+  background-color: cadetblue;
+}
+
+#content4 {
+  height: 300px;
+  background-color: chocolate;
+}
+
+#content5 {
+  height: 400px;
+  background-color: antiquewhite;
+}
+
+#content6 {
+  height: 150px;
+  background-color: aliceblue;
+}
+
+#content7 {
+  height: 200px;
+  background-color: blueviolet;
+}
+
+#content8 {
+  height: 250px;
+  background-color: cornsilk;
+}
