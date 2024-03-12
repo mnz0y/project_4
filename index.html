@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>교보문고</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -21,7 +24,15 @@
                 <div class="searchTop">
                     <div class="logo"></div>
                     <div class="search">
-                        
+                        <select name="검색" id="searchBox">
+                            <option value="통합검색">통합검색</option>
+                            <option value="교보문고">교보문고</option>
+                            <option value="eBook">eBook</option>
+                            <option value="sam">sam</option>
+                            <option value="핫트랙스">핫트랙스</option>
+                        </select>
+                        <input type="search" id="searchBar" placeholder="노벨문학상 수상 작가 욘 포세 최신작">
+                        <div class="searchImg"><a href="#"></a></div>
                     </div>
                     <div class="login">
                         <div class="loginBar">
@@ -36,8 +47,8 @@
                             </ul>
                         </div>
                         <div class="loginIcon">
-                            <div class="cart"></div>
-                            <div class="loginG"></div>
+                            <div class="cart"><a href="#"></a></div>
+                            <div class="loginG"><a href="#"></a></div>
                         </div>
                     </div>
                 </div>
@@ -56,6 +67,7 @@
                     </ul>
                 </div>
             </div>
+
         </header>
         <div id="slider">
             <div class="container">
@@ -165,16 +177,29 @@
     <div id="content8">
 
     </div>
-    
+
     <footer>
-        <div class="container">
-            <div class="notice">
-                <div class="noticeBar1"></div>
-                <div class="noticeBar2"></div>
+
+        <div class="notice">
+            <div class="container">
+
+                <div class="noticeBar">
+                    <h4>공지사항</h4>
+                    <p>우리카드 업무 중단 관련 안내(3/9 ~3/10)</p>
+                    <b><a href="#">더보기 +</a></b>
+                </div>
+                <div class="noticeBar">
+                    <h4>당첨자발표</h4>
+                    <p>[판타지][100% 캐시백] 천직이 프로파일러 당첨자 발표</p>
+                    <b><a href="#">더보기 +</a></b>
+                </div>
             </div>
-            <div class="noticeMenu">
+        </div>
+
+        <div class="noticeMenu">
+            <div class="container">
                 <div class="groupBox">
-                    <a href="#">회원혜택</a>
+                    <a href="#"><b>회원혜택</b></a>
                     <ul class="groupList">
                         <li><a href="#">Prestige Lounge</a></li>
                         <li><a href="#">신규회원 혜택</a></li>
@@ -183,7 +208,7 @@
                     </ul>
                 </div>
                 <div class="groupBox">
-                    <a href="#">쇼핑 TIP</a>
+                    <a href="#"><b>쇼핑 TIP</b></a>
                     <ul class="groupList">
                         <li><a href="#">제휴포인트/상품권</a></li>
                         <li><a href="#">교보문고 기프트카드</a></li>
@@ -192,7 +217,7 @@
                     </ul>
                 </div>
                 <div class="groupBox">
-                    <a href="#">빠른서비스</a>
+                    <a href="#"><b>빠른서비스</b></a>
                     <ul class="groupList">
                         <li><a href="#">북클럽카드 등록</a></li>
                         <li><a href="#">영수증 후 적립</a></li>
@@ -203,7 +228,7 @@
                     </ul>
                 </div>
                 <div class="groupBox">
-                    <a href="#">교보문고 소식</a>
+                    <a href="#"><b>교보문고 소식</b></a>
                     <ul class="groupList">
                         <li><a href="https://www.instagram.com/kyobobook_official/" target="_blank">인스타그램(교보문고)</a></li>
                         <li><a href="https://www.instagram.com/kyobobook_online/" target="_blank">인스타그램(인터넷교보문고)</a>
@@ -216,7 +241,7 @@
                     </ul>
                 </div>
                 <div class="groupBox">
-                    <a href="#">FAQ</a>
+                    <a href="#"><b>FAQ</b></a>
                     <ul class="groupList">
                         <li><a href="#">주문·결제</a></li>
                         <li><a href="#">eBook</a></li>
@@ -225,28 +250,86 @@
                 </div>
             </div>
         </div>
-        <div class="footerIcon">
-            <div class="footerImg"></div>
-            <div class="selectBox">
-                <select name="familysite" id="familysite">
-                    <option value="교보생명">교보생명</option>
-                    <option value="교보증권">교보증권</option>
-                    <option value="교보DTS">교보DTS</option>
-                    <option value="교보리얼코">교보리얼코</option>
-                    <option value="교보악사자산운용">교보악사자산운용</option>
-                    <option value="교보라이프플래닛생명">교보라이프플래닛생명</option>
-                </select>
-                <div class="snsY"></div>
-                <div class="snsF"></div>
-                <div class="snsI"></div>
+        <div class="container">
+            <div class="footerIcon">
+                <div class="footerImg"></div>
+                <div class="selectBox">
+                    <select name="familysite" id="familysite">
+                        <option value="familysite">Family Site</option>
+                        <option value="교보생명">교보생명</option>
+                        <option value="교보증권">교보증권</option>
+                        <option value="교보DTS">교보DTS</option>
+                        <option value="교보리얼코">교보리얼코</option>
+                        <option value="교보악사자산운용">교보악사자산운용</option>
+                        <option value="교보라이프플래닛생명">교보라이프플래닛생명</option>
+                    </select>
+                    <div class="sns"></div>
+                    <div class="sns"></div>
+                    <div class="sns"></div>
+                </div>
+            </div>
+            <div class="detailWrap">
+                <div class="footerDetail">
+                    <ul class="footerNav">
+                        <li><a href="#">회사소개</a></li>
+                        <li class="dash">|</li>
+                        <li><a href="#">이용약관</a></li>
+                        <li class="dash">|</li>
+                        <li><a href="#"><b>개인정보처리방침</b></a></li>
+                        <li class="dash">|</li>
+                        <li><a href="#">청소년보호정책</a></li>
+                        <li class="dash">|</li>
+                        <li><a href="#">대량주문안내</a></li>
+                        <li class="dash">|</li>
+                        <li><a href="#">협력사여러분</a></li>
+                        <li class="dash">|</li>
+                        <li><a href="#">채용정보</a></li>
+                        <li class="dash">|</li>
+                        <li><a href="#">광고소개</a></li>
+
+                    </ul>
+                    <div class="footerDetail">
+                        <span class="detailTxt">대표이사 : 안병현, 김상훈</span>
+                        <span class="dash">|</span>
+                        <span class="detailTxt">서울특별시 종로구 종로 1 </span>
+                        <span class="dash">|</span>
+                        <span class="detailTxt">사업자등록번호 : 102-81-11670</span>
+                        <br>
+                        <span class="detailTxt"><b>대표전화 : 1544-1900(발신자 부담전화)</b></span>
+                        <span class="dash">|</span>
+                        <span class="detailTxt">FAX : 0502-987-5711(지역번호 공통)</span>
+                        <span class="dash">|</span>
+                        <span class="detailTxt">서울특별시 통신판매업신고번호 : 제 653호</span>
+                        <button>사업자정보확인</button>
+
+                    </div>
+                    <p class="copyright">© KYOBO BOOK CENTRE</p>
+                </div>
+                <div class="footerToss">
+                    <span>토스페이먼츠 구매안전 서비스</span>
+                    <button>서비스 가입 확인</button>
+                    <br>
+                    <span>
+                        고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 <br>
+                        토스페이먼츠의 구매안전서비스를 이용하실 수 있습니다.
+                    </span>
+
+                    <div class="tossImg">
+                        <img src="img/tossImg.png" alt="logoImg">
+                        <span>정보보호관리체계 <br>
+                            ISMS 인증획득</span>
+                        <span>
+                            [인증범위] 인터넷 교보문고 및 브랜드 서비스 운영 <br>
+                            [유효기간] 2023. 11. 15 ~ 2026. 11 .14
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="footerDetail"></div>
-        <div class="footerToss"></div>
 
     </footer>
     <div class="fixBox">
-        
+
     </div>
 
     </div>
