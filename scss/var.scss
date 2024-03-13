@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+$mainColor : #5055b1;
+$bgColor : #f4f4f4;
+$green : #6DB329;
+
+
+@mixin backGround($url, $position: null) {
+    background: {
+        image: $url;
+        position: $position;
+        repeat: no-repeat;
+        size: cover;
+    }
+}
+
+@mixin dFlex($w: 100%, $ai: center, $jc: space-between) {
+    display: flex;
+    flex-wrap: wrap;
+    width: $w;
+    align-items: $ai;
+    justify-content: $jc;
+}
+

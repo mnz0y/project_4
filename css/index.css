@@ -1,21 +1,277 @@
 #slider {
-  height: 650px;
-  background-color: azure;
+  height: 615px;
+  position: relative;
+}
+#slider .slideText {
+  position: relative;
+  padding-top: 50px;
+  width: 100%;
+  height: 165px;
+}
+#slider .slideText li {
+  position: absolute;
+}
+#slider .slideText li:not(:nth-child(1)) {
+  display: none;
+}
+#slider .slideText li p {
+  font-size: 40px;
+  font-weight: bold;
+  padding-left: 50px;
+}
+
+.sPopup {
+  position: absolute;
+  top: 50px;
+  right: 320px;
+  width: 260px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 20px 0 20px 20px;
+  z-index: 5;
+}
+.sPopup img {
+  width: 100%;
+  height: 200px;
+}
+.sPopup .popText {
+  background-color: #fff;
+  height: 100px;
+  padding: 10px 14px;
+  margin-top: -5px;
+}
+.sPopup .popText span {
+  color: #5055b1;
+  font-size: 14px;
+  font-weight: 600;
+}
+.sPopup .popText p {
+  font-size: 15px;
+  font-weight: bold;
+}
+.sPopup .popText small {
+  color: #555;
+  line-height: 30px;
+}
+
+.slideImg {
+  position: relative;
+  height: 450px;
+}
+.slideImg ul li {
+  position: absolute;
+  right: 0;
+}
+.slideImg ul li:not(:nth-child(1)) {
+  display: none;
+}
+
+.slideBar {
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  background-color: rgba(249, 249, 249, 0.8);
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  align-items: center;
+  justify-content: flex-start;
+}
+.slideBar ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 65%;
+  justify-content: space-evenly;
+  height: 70px;
+}
+.slideBar ul li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.aUnderline {
+  border-bottom: 2px solid #333;
+  font-weight: bold;
+}
+
+.controlBox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 12%;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #ddd;
+}
+.controlBox div {
+  width: 15px;
+  height: 15px;
+  margin: 0 8%;
+  cursor: pointer;
+  border-top: 3px solid #999;
+  border-left: 3px solid #999;
+}
+.controlBox div:nth-child(1) {
+  transform: rotate(-45deg);
+}
+.controlBox div:nth-child(2) {
+  transform: rotate(135deg);
 }
 
 #content1 {
-  height: 100px;
-  background-color: bisque;
+  height: 150px;
+}
+#content1 .contentBar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+}
+#content1 .contentBar li {
+  width: 7%;
+}
+#content1 .contentBar li a {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
 }
 
 #content2 {
   height: 600px;
-  background-color: burlywood;
+}
+#content2 .titleBox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 70px;
+}
+#content2 .titleBox h2 {
+  font-size: 35px;
+}
+#content2 .titleBox .categoryList {
+  display: flex;
+  flex-wrap: wrap;
+  width: 45%;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+#content2 .titleBox .categoryList a {
+  position: relative;
+  transition: all 0.5s;
+}
+#content2 .titleBox .categoryList a:hover::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background-color: #6DB329;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -5px;
+  border-radius: 50%;
+}
+#content2 .titleBox span {
+  width: 35%;
+  text-align: right;
+  font-weight: bold;
+}
+#content2 .titleBox span::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-bottom: 1px;
+  margin-left: 5px;
+  background-image: url(../img/plus.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#content2 .titleBox span:hover {
+  text-decoration: underline;
+}
+
+.titleFont {
+  color: #5055b1;
+  font-weight: bold;
+}
+
+.bookList2 {
+  height: 530px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.bookList2 .bookDetail {
+  width: 55%;
+  height: 400px;
+  background-color: antiquewhite;
+}
+.bookList2 .bookSlide {
+  width: 40%;
+  height: 400px;
+  background-color: aqua;
+}
+.bookList2 .left {
+  position: absolute;
+  left: -55px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url(../img/left.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #ddd;
+}
+.bookList2 .right {
+  position: absolute;
+  right: -55px;
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/right.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #ddd;
+  border-radius: 50%;
 }
 
 #content3 {
   height: 200px;
-  background-color: cadetblue;
+}
+#content3 .container {
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#content3 .container .bannerList {
+  width: 45%;
+  height: 150px;
+  border-radius: 20px;
+}
+#content3 .container .bannerList:nth-child(1) {
+  background-image: url(../img/banner1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#content3 .container .bannerList:nth-child(2) {
+  background-image: url(../img/banner2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #content4 {

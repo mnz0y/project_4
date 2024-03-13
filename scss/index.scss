@@ -1,38 +1,302 @@
 @charset "UTF-8";
+@import "var.scss";
 
-#slider{
-    height: 650px;
-    background-color: azure;
+#slider {
+    height: 615px;
+    position: relative;
+
+    .slideText {
+        position: relative;
+        padding-top: 50px;
+        width: 100%;
+        height: 165px;
+
+        li {
+            position: absolute;
+
+            &:not(:nth-child(1)) {
+                display: none;
+            }
+
+            p {
+                font: {
+                    size: 40px;
+                    weight: bold;
+                }
+
+                ;
+                padding-left: 50px;
+            }
+        }
+    }
+
 }
-#content1{
-    height: 100px;
-    background-color: bisque;
+
+.sPopup {
+    position: absolute;
+    top: 50px;
+    right: 320px;
+    width: 260px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px 0 20px 20px;
+    z-index: 5;
+
+    img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .popText {
+        background-color: #fff;
+        height: 100px;
+        padding: 10px 14px;
+        margin-top: -5px;
+
+        span {
+            color: $mainColor;
+
+            font : {
+                size: 14px;
+                weight: 600;
+            }
+
+            ;
+        }
+
+        p {
+            font: {
+                size: 15px;
+                weight: bold;
+            }
+        }
+
+        small {
+            color: #555;
+            line-height: 30px;
+        }
+    }
 }
-#content2{
+
+.slideImg {
+    position: relative;
+    height: 450px;
+
+    ul {
+        li {
+            position: absolute;
+            right: 0;
+
+            &:not(:nth-child(1)) {
+                display: none;
+            }
+        }
+    }
+}
+
+.slideBar {
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    background-color: rgba(249, 249, 249, 0.8);
+    right: 0;
+    @include dFlex(70%, center, flex-start);
+
+    ul {
+        @include dFlex(65%, null, space-evenly);
+        height: 70px;
+
+        li {
+            @include dFlex(null, center, null);
+        }
+
+    }
+}
+
+.aUnderline {
+    border-bottom: 2px solid #333;
+    font-weight: bold;
+}
+
+.controlBox {
+    @include dFlex(12%, center, center);
+    border-left: 1px solid #ddd;
+
+    div {
+        width: 15px;
+        height: 15px;
+        margin: 0 8%;
+        cursor: pointer;
+
+        border: {
+            top: 3px solid #999;
+            left: 3px solid #999;
+        }
+
+        ;
+
+        &:nth-child(1) {
+            transform: rotate(-45deg);
+        }
+
+        &:nth-child(2) {
+            transform: rotate(135deg);
+        }
+    }
+}
+
+
+#content1 {
+    height: 150px;
+
+    .contentBar {
+        @include dFlex(100%);
+        height: 150px;
+
+        li {
+            width: 7%;
+
+            a {
+                @include dFlex($jc: center);
+                font-size: 13px;
+            }
+        }
+
+    }
+
+}
+
+#content2 {
     height: 600px;
-    background-color: burlywood;
+    .titleBox{
+        @include dFlex($ai:flex-end);
+        height: 70px;
+        h2{
+            font-size: 35px
+        }
+        .categoryList{
+            @include dFlex(45%,flex-end);
+            a{
+                position: relative;
+                transition: all 0.5s;
+                &:hover::before{
+                    content: "";
+                    display: inline-block;
+                    width: 4px;
+                    height: 4px;
+                    background-color: $green;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: -5px;
+                    border-radius: 50%;
+                }
+                
+            }
+        }
+        span{
+            width: 35%;
+            text-align: right;
+            font-weight: bold;
+            &::after{
+                content: "";
+                width: 10px;
+                height: 10px;
+                display: inline-block;
+                margin: {
+                    bottom: 1px;
+                    left: 5px;
+                };
+                @include backGround(url(../img/plus.png));
+            }
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    
 }
-#content3{
+
+
+.titleFont{color: $mainColor;font-weight: bold;}
+
+.bookList2{
+    height: 530px;
+    @include dFlex();
+    position: relative;
+    .bookDetail{
+        width: 55%;
+        height: 400px;
+        background-color: antiquewhite;
+    }
+    .bookSlide{
+        width: 40%;
+        height: 400px;
+        background-color: aqua;
+
+    }
+    .left{
+        position: absolute;
+        left: -55px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        @include backGround(url(../img/left.png));
+        border: 1px solid #ddd;
+    }
+    .right{
+        position: absolute;
+        right: -55px;
+        width: 50px;
+        height: 50px;
+        @include backGround(url(../img/right.png));
+        border: 1px solid #ddd;
+        border-radius: 50%;
+    }
+}
+
+#content3 {
     height: 200px;
-    background-color: cadetblue;
+
+    .container {
+        height: 200px;
+        @include dFlex(null,center,space-evenly);
+        .bannerList {
+            width: 45%;
+            height: 150px;
+            border-radius: 20px;
+            &:nth-child(1){
+                @include backGround(url(../img/banner1.jpg),center);
+            };
+            &:nth-child(2){
+                @include backGround(url(../img/banner2.png),center);
+            }
+        }
+    }
+
 }
-#content4{
+
+#content4 {
     height: 300px;
     background-color: chocolate;
 }
-#content5{
+
+#content5 {
     height: 400px;
     background-color: antiquewhite;
 }
-#content6{
+
+#content6 {
     height: 150px;
     background-color: aliceblue;
 }
-#content7{
+
+#content7 {
     height: 200px;
     background-color: blueviolet;
 }
-#content8{
+
+#content8 {
     height: 250px;
     background-color: cornsilk;
 }
