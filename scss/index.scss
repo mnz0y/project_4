@@ -2,6 +2,8 @@
 @import "var.scss";
 
 #slider {
+    width: 1903px;
+    margin: 0 auto;
     height: 615px;
     position: relative;
 
@@ -225,14 +227,66 @@
     @include dFlex();
     position: relative;
     .bookDetail{
-        width: 55%;
+        width: 50%;
         height: 400px;
-        background-color: antiquewhite;
+        position: relative;
+         .todayBook{
+            height: 100%;
+            @include dFlex();
+            //position: absolute;
+            // &:not(:nth-child(1)){
+            //     display: none;
+            // }
+            a{
+                height: 100%;
+                @include dFlex(50%,center,center);
+                img{
+                    width: 75%;
+                    height: 80%;
+                    box-shadow: 10px 10px 15px #999;
+                    
+                }
+            }
+            .textbox{
+                width: 50%;
+                p{
+                    margin: 2% 0;
+                }
+                span{
+                    margin-right: 10px;
+                    &:nth-of-type(1){
+                        color: $green;
+                    }
+                }
+            }
+            
+            
+            
+         }
     }
     .bookSlide{
-        width: 40%;
+        width: 45%;
         height: 400px;
-        background-color: aqua;
+        //overflow: hidden;
+        .bookSlideWrap{
+            @include dFlex(263%,center,space-evenly);
+            height: 400px;
+           margin-left: -170px;
+            .todaySlideBook{
+                height: 300px;
+                @include dFlex(170px,null,center);
+                align-content: center;
+                img{
+                    border: 1px solid $bgColor;
+                }
+                p{
+                    width: 100%;
+                    text-align: center;
+                    font-size: 13px;
+                    margin-top: 3%;
+                }
+            }
+        }
 
     }
     .left{
