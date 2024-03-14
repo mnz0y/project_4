@@ -215,6 +215,9 @@
   justify-content: space-between;
   position: relative;
 }
+.bookList2:not(:nth-child(2)) {
+  display: none;
+}
 .bookList2 .bookDetail {
   width: 50%;
   height: 400px;
@@ -227,6 +230,10 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  position: absolute;
+}
+.bookList2 .bookDetail .todayBook:not(:nth-child(1)) {
+  display: none;
 }
 .bookList2 .bookDetail .todayBook a {
   height: 100%;
@@ -256,6 +263,7 @@
 .bookList2 .bookSlide {
   width: 45%;
   height: 400px;
+  overflow: hidden;
 }
 .bookList2 .bookSlide .bookSlideWrap {
   display: flex;
@@ -264,7 +272,7 @@
   align-items: center;
   justify-content: space-evenly;
   height: 400px;
-  margin-left: -170px;
+  margin-left: -175px;
 }
 .bookList2 .bookSlide .bookSlideWrap .todaySlideBook {
   height: 300px;
@@ -278,7 +286,7 @@
   border: 1px solid #f4f4f4;
 }
 .bookList2 .bookSlide .bookSlideWrap .todaySlideBook p {
-  width: 100%;
+  width: 84%;
   text-align: center;
   font-size: 13px;
   margin-top: 3%;
@@ -307,10 +315,10 @@
 }
 
 #content3 {
-  height: 200px;
+  height: 300px;
 }
 #content3 .container {
-  height: 200px;
+  height: 250px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -335,8 +343,50 @@
 }
 
 #content4 {
-  height: 300px;
-  background-color: chocolate;
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+#content4 .castBg ul {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+#content4 .castBg ul li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#content4 .castBg ul li:nth-child(1) {
+  background-image: url(../img/contents4_1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+}
+#content4 .castBg ul li:nth-child(2) {
+  background-image: url(../img/contents4_2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+}
+#content4 .castBg ul li:nth-child(3) {
+  background-image: url(../img/contents4_3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+}
+#content4 .castBg ul li:nth-child(4) {
+  background-image: url(../img/contents4_4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+}
+#content4 .castBg ul li:not(:nth-child(1)) {
+  display: none;
 }
 
 #content5 {
