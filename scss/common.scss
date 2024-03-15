@@ -129,12 +129,14 @@ header {
 
         .loginG {
             margin: 0 5%;
-
             a {
                 display: block;
                 width: 35px;
                 height: 35px;
+                box-shadow: 0 5px 10px 0 rgba(77, 172, 39, 0.5);
+                border-radius: 50%;
                 @include backGround(url(../img/id.png), center);
+                
             }
         }
 

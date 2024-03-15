@@ -525,15 +525,72 @@
 // 컨텐츠5
 //베스트셀러
 #content5 {
-    height: 700px;
-    //background-color: antiquewhite;
-
+    height: 1100px;
+    margin-top: 50px;
+}
+.bookList5{
+    width: 100%;
+    height: 900px;
+    margin-top: 50px;
+    @include dFlex(100%,null);
+    align-content: space-around;
+    &:not(:nth-child(2)){
+        display: none;
+    }
+}
+.bestBook{
+    width: 19%;
+    height: 350px;
+    position: relative;
+    text-align: center;
+    span{
+        position: absolute;
+        top: -33px;
+        display: inline-block;
+            text-align: center;
+            width: 26px;
+            height: 26px;
+            background-color: #bbb;
+            color: #fff;
+            font-size: 13px;
+            padding: 2px;
+            border-radius: 8px 0 8px 0;
+    }
+    .bestTop{
+        @include backGround(url(../img/best.png),center);
+        width: 130px;
+        height: 26px;
+    }
+}
+.bestBook{
+    img{
+        width: 200px;
+        height: 300px;
+        @include shadow;
+        border-radius: 8px 0 8px 0;
+    }
+    p{
+        width: 200px;
+        margin: 2% auto;
+        text-align: left;
+        &:nth-of-type(1){
+            font : {
+                size: 15px;
+                weight : bold;
+            };
+            padding-top: 15px;
+        }
+        &:nth-of-type(2){
+            font-size: 13px;
+            color: #555;
+        }
+    }
 }
 
 // 컨텐츠6
 //이벤트
 #content6 {
-    height: 250px;
+    height: 300px;
 
     .titleBox {
         @include dFlex($ai: flex-end);
@@ -715,7 +772,7 @@
 // 컨텐츠8
 //히트
 #content8 {
-    height: 400px;
+    height: 500px;
     .container {
         @include dFlex(1260px);
         height: 100%;
@@ -756,14 +813,14 @@
         height: 300px;
 
         li{
-            width: 280px;
-            height: 280px;
+            width: 270px;
+            height: 270px;
             border-radius: 50%;
             overflow: hidden;
             position: relative;
             text-align: center;
            @include backGround(null,center);
-
+           @include shadow;
             p{
                 width: 100%;
                 height: 100%;
@@ -784,8 +841,52 @@
 //컨텐츠9
 //이주의 책
 #content9{
-    height: 500px;
-    background-color: aquamarine;
+    height: 700px;
+    .container{
+        position: relative;
+    .weekBook{
+        width: 100%;
+        height: 450px;
+        margin-top: 50px;
+        overflow: hidden;
+    }
+    .left{
+        position: absolute;
+        @include leftButton;
+        left:-55px;
+        top: 55%; 
+    }
+    .right{
+        position: absolute;
+        @include rightButton;
+        right: -55px;
+        top: 55%;
+    }
+    }
 }
-
-
+// 이주의 책 슬라이더
+.weekSlide{
+    @include dFlex(200%,center);
+    height: 100%;
+    text-align: center;
+    li{
+        width: 12%;
+        height: 100%;
+        img{
+            width: 230px;
+            height: 300px;
+            margin-top: 20px;
+            @include shadow;
+        }
+        p{
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        span{
+            font-size: 14px;
+            color: #555;
+        }
+    
+            
+    }
+}

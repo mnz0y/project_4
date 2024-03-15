@@ -225,6 +225,32 @@ for(let i =0; i<video.length;i++){
     });
 }
 
+//컨텐츠5-베스트셀러
+let best;
+best =["너랑", "위대한", "인생", "나에게","여행","우리"];
+for(let i =0; i<best.length;i++){
+  $.ajax({
+    method: "GET",
+    url: "https://dapi.kakao.com/v3/search/book?target=contents",
+    data: { query: best[i], size: 20 },
+    headers: { Authorization: "KakaoAK 8244a385855c795ceaadd4a47e53aa38" }
+  })
+    .done(function (msg) {
+      const origin = msg.documents;
+      let data = origin.filter((val) => {
+        return val.thumbnail !== "" && val.title !='';
+      });
+      let bestBox = $('.bestBook');
+
+      for(let j=0;j<bestBox.length;j++){
+
+        $('.bestBook'+i).eq(j).append('<a href="#"><img src="'+origin[j].thumbnail+'"/></a>');
+        $('.bestBook'+i).eq(j).append('<p>' + origin[j].title+'</p>');
+        $('.bestBook'+i).eq(j).append('<p>' + origin[j].authors +' · '+origin[j].publisher+'</p>');
+      }
+    });
+}
+
 //컨텐츠7-picks
 let picks;
 picks =["wonka", "데일 카네기 인간관계론", "퍼스널 MBA", "빨간내복야코 맞춤법"]
@@ -268,3 +294,24 @@ for(let i =0; i<picks.length;i++){
       }
     });
 
+    // 컨텐츠9-이 주의 책
+  $.ajax({
+    method: "GET",
+    url: "https://dapi.kakao.com/v3/search/book?target=contents",
+    data: { query: '웅진', size: 50 },
+    headers: { Authorization: "KakaoAK 8244a385855c795ceaadd4a47e53aa38" }
+  })
+    .done(function (msg) {
+      const origin = msg.documents;
+      let data = origin.filter((val) => {
+      return val.thumbnail !== "" && val.title !='';
+      });
+      const week =$('.weekSlide li');       
+      for(let i =0;i<week.length; i++){
+        week.eq(i).append('<a href="#"><img src="'+origin[i].thumbnail+'"/></a>');
+        week.eq(i).append('<p>' + origin[i].title+'</p>');
+        week.eq(i).append('<span>' + origin[i].authors +' · '+origin[i].publisher+'</span>');
+      }
+    });
+
+  

@@ -137,6 +137,8 @@ header .searchTop .logo {
   display: block;
   width: 35px;
   height: 35px;
+  box-shadow: 0 5px 10px 0 rgba(77, 172, 39, 0.5);
+  border-radius: 50%;
   background-image: url(../img/id.png);
   background-position: center;
   background-repeat: no-repeat;

@@ -569,11 +569,75 @@
 }
 
 #content5 {
-  height: 700px;
+  height: 1100px;
+  margin-top: 50px;
+}
+
+.bookList5 {
+  width: 100%;
+  height: 900px;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  align-content: space-around;
+}
+.bookList5:not(:nth-child(2)) {
+  display: none;
+}
+
+.bestBook {
+  width: 19%;
+  height: 350px;
+  position: relative;
+  text-align: center;
+}
+.bestBook span {
+  position: absolute;
+  top: -33px;
+  display: inline-block;
+  text-align: center;
+  width: 26px;
+  height: 26px;
+  background-color: #bbb;
+  color: #fff;
+  font-size: 13px;
+  padding: 2px;
+  border-radius: 8px 0 8px 0;
+}
+.bestBook .bestTop {
+  background-image: url(../img/best.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 130px;
+  height: 26px;
+}
+
+.bestBook img {
+  width: 200px;
+  height: 300px;
+  box-shadow: 5px 5px 5px #999;
+  border-radius: 8px 0 8px 0;
+}
+.bestBook p {
+  width: 200px;
+  margin: 2% auto;
+  text-align: left;
+}
+.bestBook p:nth-of-type(1) {
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 15px;
+}
+.bestBook p:nth-of-type(2) {
+  font-size: 13px;
+  color: #555;
 }
 
 #content6 {
-  height: 250px;
+  height: 300px;
 }
 #content6 .titleBox {
   display: flex;
@@ -789,7 +853,7 @@
 }
 
 #content8 {
-  height: 400px;
+  height: 500px;
 }
 #content8 .container {
   display: flex;
@@ -870,8 +934,8 @@
   height: 300px;
 }
 .hitList ul li {
-  width: 280px;
-  height: 280px;
+  width: 270px;
+  height: 270px;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
@@ -879,6 +943,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 5px 5px 5px #999;
 }
 .hitList ul li p {
   width: 100%;
@@ -896,6 +961,68 @@
 }
 
 #content9 {
-  height: 500px;
-  background-color: aquamarine;
+  height: 700px;
+}
+#content9 .container {
+  position: relative;
+}
+#content9 .container .weekBook {
+  width: 100%;
+  height: 450px;
+  margin-top: 50px;
+  overflow: hidden;
+}
+#content9 .container .left {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #999;
+  display: inline-block;
+  background-image: url(../img/left.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: -55px;
+  top: 55%;
+}
+#content9 .container .right {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #999;
+  display: inline-block;
+  background-image: url(../img/right.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: -55px;
+  top: 55%;
+}
+
+.weekSlide {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200%;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  text-align: center;
+}
+.weekSlide li {
+  width: 12%;
+  height: 100%;
+}
+.weekSlide li img {
+  width: 230px;
+  height: 300px;
+  margin-top: 20px;
+  box-shadow: 5px 5px 5px #999;
+}
+.weekSlide li p {
+  font-weight: bold;
+  margin: 20px 0;
+}
+.weekSlide li span {
+  font-size: 14px;
+  color: #555;
 }
