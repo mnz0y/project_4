@@ -5,7 +5,8 @@ $bgColor : #f4f4f4;
 $green : #6DB329;
 $opacityB : rgba(0, 0, 0, 0.6);
 
-@mixin shadow{ box-shadow: 5px 5px 5px #999;}; 
+@mixin shadow{
+    box-shadow: 5px 5px 5px #999;}; 
 
 @mixin backGround($url, $position: null) {
     background: {
