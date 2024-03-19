@@ -7,19 +7,23 @@ $.ajax({
 })
   .done(function (msg) {
     //오늘의 책 왼쪽
+    const origin = msg.documents;
+      let data = origin.filter((val) => {
+        return val.thumbnail !== "" && val.title !='';
+      });
     const today = $('.Lbook0');
 
     for (let i = 0; i < today.length; i++) {
-      $('.Lbook0').eq(i).prepend('<a href="#"><img src="' + msg.documents[i].thumbnail + '"/></a>');
-      $('.book0').eq(i).append('<h2>' + msg.documents[i].title + '</h2>');
-      $('.book0').eq(i).append('<p>' + msg.documents[i].authors + '</p>');
+      $('.Lbook0').eq(i).prepend('<a href="#"><img src="' + data[i].thumbnail + '"/></a>');
+      $('.book0').eq(i).append('<h2>' + data[i].title + '</h2>');
+      $('.book0').eq(i).append('<p>' + data[i].authors + '</p>');
 
-      let priceDot = msg.documents[i].sale_price;
+      let priceDot = data[i].sale_price;
       let dot = priceDot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
       $('.book0').eq(i).append('<span>10%</span>');
       $('.book0').eq(i).append('<span>' + dot + '원</span>');
 
-      let str = msg.documents[i].contents;
+      let str = data[i].contents;
       let str2 = str.substring(0, 100);
       $('.book0').eq(i).append('<p>' + str2 + '</p>');
     }
@@ -27,8 +31,8 @@ $.ajax({
     //오늘의 책 오른쪽
     const todaySlide = $('.slidebook0');
     for (let i = 0; i < todaySlide.length; i++) {
-      $('.slidebook0').eq(i).append('<a href="#"><img src="' + msg.documents[i].thumbnail + '"/></a>');
-      $('.slidebook0').eq(i).append('<p>' + msg.documents[i].title + '</p>');
+      $('.slidebook0').eq(i).append('<a href="#"><img src="' + data[i].thumbnail + '"/></a>');
+      $('.slidebook0').eq(i).append('<p>' + data[i].title + '</p>');
     }
   });
 
@@ -41,19 +45,23 @@ $.ajax({
 })
   .done(function (msg) {
     //오늘의 책 왼쪽
+    const origin = msg.documents;
+      let data = origin.filter((val) => {
+        return val.thumbnail !== "" && val.title !='';
+      });
     const today = $('.Lbook1');
 
     for (let i = 0; i < today.length; i++) {
-      $('.Lbook1').eq(i).prepend('<a href="#"><img src="' + msg.documents[i].thumbnail + '"/></a>');
-      $('.book1').eq(i).append('<h2>' + msg.documents[i].title + '</h2>');
-      $('.book1').eq(i).append('<p>' + msg.documents[i].authors + '</p>');
+      $('.Lbook1').eq(i).prepend('<a href="#"><img src="' + data[i].thumbnail + '"/></a>');
+      $('.book1').eq(i).append('<h2>' + data[i].title + '</h2>');
+      $('.book1').eq(i).append('<p>' + data[i].authors + '</p>');
 
-      let priceDot = msg.documents[i].sale_price;
+      let priceDot = data[i].sale_price;
       let dot = priceDot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
       $('.book1').eq(i).append('<span>10%</span>');
       $('.book1').eq(i).append('<span>' + dot + '원</span>');
 
-      let str = msg.documents[i].contents;
+      let str = data[i].contents;
       let str2 = str.substring(0, 100);
       $('.book1').eq(i).append('<p>' + str2 + '</p>');
     }
@@ -61,8 +69,8 @@ $.ajax({
     //오늘의 책 오른쪽
     const todaySlide = $('.slidebook1');
     for (let i = 0; i < todaySlide.length; i++) {
-      $('.slidebook1').eq(i).append('<a href="#"><img src="' + msg.documents[i].thumbnail + '"/></a>');
-      $('.slidebook1').eq(i).append('<p>' + msg.documents[i].title + '</p>');
+      $('.slidebook1').eq(i).append('<a href="#"><img src="' + data[i].thumbnail + '"/></a>');
+      $('.slidebook1').eq(i).append('<p>' + data[i].title + '</p>');
     }
   });
 
@@ -74,20 +82,26 @@ $.ajax({
   headers: { Authorization: "KakaoAK 8244a385855c795ceaadd4a47e53aa38" }
 })
   .done(function (msg) {
+   
     //오늘의 책 왼쪽
+    const origin = msg.documents;
+      let data = origin.filter((val) => {
+        return val.thumbnail !== "" && val.title !='';
+      });
+      console.log(data);
     const today = $('.Lbook2');
 
     for (let i = 0; i < today.length; i++) {
-      $('.Lbook2').eq(i).prepend('<a href="#"><img src="' + msg.documents[i].thumbnail + '"/></a>');
-      $('.book2').eq(i).append('<h2>' + msg.documents[i].title + '</h2>');
-      $('.book2').eq(i).append('<p>' + msg.documents[i].authors + '</p>');
+      $('.Lbook2').eq(i).prepend('<a href="#"><img src="' + data[i].thumbnail + '"/></a>');
+      $('.book2').eq(i).append('<h2>' + data[i].title + '</h2>');
+      $('.book2').eq(i).append('<p>' + data[i].authors + '</p>');
 
-      let priceDot = msg.documents[i].sale_price;
+      let priceDot = data[i].sale_price;
       let dot = priceDot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
       $('.book2').eq(i).append('<span>10%</span>');
       $('.book2').eq(i).append('<span>' + dot + '원</span>');
 
-      let str = msg.documents[i].contents;
+      let str = data[i].contents;
       let str2 = str.substring(0, 100);
       $('.book2').eq(i).append('<p>' + str2 + '</p>');
     }
@@ -95,8 +109,8 @@ $.ajax({
     //오늘의 책 오른쪽
     const todaySlide = $('.slidebook2');
     for (let i = 0; i < todaySlide.length; i++) {
-      $('.slidebook2').eq(i).append('<a href="#"><img src="' + msg.documents[i].thumbnail + '"/></a>');
-      $('.slidebook2').eq(i).append('<p>' + msg.documents[i].title + '</p>');
+      $('.slidebook2').eq(i).append('<a href="#"><img src="' + data[i].thumbnail + '"/></a>');
+      $('.slidebook2').eq(i).append('<p>' + data[i].title + '</p>');
     }
   });
 
@@ -108,20 +122,25 @@ $.ajax({
   headers: { Authorization: "KakaoAK 8244a385855c795ceaadd4a47e53aa38" }
 })
   .done(function (msg) {
+    
     //오늘의 책 왼쪽
+    const origin = msg.documents;
+      let data = origin.filter((val) => {
+        return val.thumbnail !== "" && val.title !='';
+      });
     const today = $('.Lbook3');
 
     for (let i = 0; i < today.length; i++) {
-      $('.Lbook3').eq(i).prepend('<a href="#"><img src="' + msg.documents[i].thumbnail + '"/></a>');
-      $('.book3').eq(i).append('<h2>' + msg.documents[i].title + '</h2>');
-      $('.book3').eq(i).append('<p>' + msg.documents[i].authors + '</p>');
+      $('.Lbook3').eq(i).prepend('<a href="#"><img src="' + data[i].thumbnail + '"/></a>');
+      $('.book3').eq(i).append('<h2>' + data[i].title + '</h2>');
+      $('.book3').eq(i).append('<p>' + data[i].authors + '</p>');
 
-      let priceDot = msg.documents[i].sale_price;
+      let priceDot = data[i].sale_price;
       let dot = priceDot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
       $('.book3').eq(i).append('<span>10%</span>');
       $('.book3').eq(i).append('<span>' + dot + '원</span>');
 
-      let str = msg.documents[i].contents;
+      let str = data[i].contents;
       let str2 = str.substring(0, 100);
       $('.book3').eq(i).append('<p>' + str2 + '</p>');
     }
@@ -129,8 +148,8 @@ $.ajax({
     //오늘의 책 오른쪽
     const todaySlide = $('.slidebook3');
     for (let i = 0; i < todaySlide.length; i++) {
-      $('.slidebook3').eq(i).append('<a href="#"><img src="' + msg.documents[i].thumbnail + '"/></a>');
-      $('.slidebook3').eq(i).append('<p>' + msg.documents[i].title + '</p>');
+      $('.slidebook3').eq(i).append('<a href="#"><img src="' + data[i].thumbnail + '"/></a>');
+      $('.slidebook3').eq(i).append('<p>' + data[i].title + '</p>');
     }
   });
 
@@ -143,19 +162,23 @@ $.ajax({
 })
   .done(function (msg) {
     //오늘의 책 왼쪽
+    const origin = msg.documents;
+      let data = origin.filter((val) => {
+        return val.thumbnail !== "" && val.title !='';
+      });
     const today = $('.Lbook4');
 
     for (let i = 0; i < today.length; i++) {
-      $('.Lbook4').eq(i).prepend('<a href="#"><img src="' + msg.documents[i].thumbnail + '"/></a>');
-      $('.book4').eq(i).append('<h2>' + msg.documents[i].title + '</h2>');
-      $('.book4').eq(i).append('<p>' + msg.documents[i].authors + '</p>');
+      $('.Lbook4').eq(i).prepend('<a href="#"><img src="' + data[i].thumbnail + '"/></a>');
+      $('.book4').eq(i).append('<h2>' + data[i].title + '</h2>');
+      $('.book4').eq(i).append('<p>' + data[i].authors + '</p>');
 
-      let priceDot = msg.documents[i].sale_price;
+      let priceDot = data[i].sale_price;
       let dot = priceDot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
       $('.book4').eq(i).append('<span>10%</span>');
       $('.book4').eq(i).append('<span>' + dot + '원</span>');
 
-      let str = msg.documents[i].contents;
+      let str = data[i].contents;
       let str2 = str.substring(0, 100);
       $('.book4').eq(i).append('<p>' + str2 + '</p>');
     }
@@ -163,8 +186,8 @@ $.ajax({
     //오늘의 책 오른쪽
     const todaySlide = $('.slidebook4');
     for (let i = 0; i < todaySlide.length; i++) {
-      $('.slidebook4').eq(i).append('<a href="#"><img src="' + msg.documents[i].thumbnail + '"/></a>');
-      $('.slidebook4').eq(i).append('<p>' + msg.documents[i].title + '</p>');
+      $('.slidebook4').eq(i).append('<a href="#"><img src="' + data[i].thumbnail + '"/></a>');
+      $('.slidebook4').eq(i).append('<p>' + data[i].title + '</p>');
     }
   });
 
@@ -177,19 +200,23 @@ $.ajax({
 })
   .done(function (msg) {
     //오늘의 책 왼쪽
+    const origin = msg.documents;
+      let data = origin.filter((val) => {
+        return val.thumbnail !== "" && val.title !='';
+      });
     const today = $('.Lbook5');
 
     for (let i = 0; i < today.length; i++) {
-      $('.Lbook5').eq(i).prepend('<a href="#"><img src="' + msg.documents[i].thumbnail + '"/></a>');
-      $('.book5').eq(i).append('<h2>' + msg.documents[i].title + '</h2>');
-      $('.book5').eq(i).append('<p>' + msg.documents[i].authors + '</p>');
+      $('.Lbook5').eq(i).prepend('<a href="#"><img src="' + data[i].thumbnail + '"/></a>');
+      $('.book5').eq(i).append('<h2>' + data[i].title + '</h2>');
+      $('.book5').eq(i).append('<p>' + data[i].authors + '</p>');
 
-      let priceDot = msg.documents[i].sale_price;
+      let priceDot = data[i].sale_price;
       let dot = priceDot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       $('.book5').eq(i).append('<span>10%</span>');
       $('.book5').eq(i).append('<span>' + dot + '원</span>');
 
-      let str = msg.documents[i].contents;
+      let str = data[i].contents;
       let str2 = str.substring(0, 100);
       $('.book5').eq(i).append('<p>' + str2 + '</p>');
     }
@@ -197,8 +224,8 @@ $.ajax({
     //오늘의 책 오른쪽
     const todaySlide = $('.slidebook5');
     for (let i = 0; i < todaySlide.length; i++) {
-      $('.slidebook5').eq(i).append('<a href="#"><img src="' + msg.documents[i].thumbnail + '"/></a>');
-      $('.slidebook5').eq(i).append('<p>' + msg.documents[i].title + '</p>');
+      $('.slidebook5').eq(i).append('<a href="#"><img src="' + data[i].thumbnail + '"/></a>');
+      $('.slidebook5').eq(i).append('<p>' + data[i].title + '</p>');
     }
   });
 
@@ -219,8 +246,8 @@ for(let i =0; i<video.length;i++){
         return val.thumbnail !== "" && val.title !='';
       });
 
-      $('.bookbox4').eq(i).append('<img src = "'+origin[0].thumbnail+'"/>');
-      $('.bookbox4').eq(i).append('<span>'+origin[0].title+'</span>');
+      $('.bookbox4').eq(i).append('<img src = "'+data[0].thumbnail+'"/>');
+      $('.bookbox4').eq(i).append('<span>'+data[0].title+'</span>');
       
     });
 }
@@ -240,13 +267,12 @@ for(let i =0; i<best.length;i++){
       let data = origin.filter((val) => {
         return val.thumbnail !== "" && val.title !='';
       });
-      let bestBox = $('.bestBook');
+      
+      for(let j=0;j<10;j++){
 
-      for(let j=0;j<bestBox.length;j++){
-
-        $('.bestBook'+i).eq(j).append('<a href="#"><img src="'+origin[j].thumbnail+'"/></a>');
-        $('.bestBook'+i).eq(j).append('<p>' + origin[j].title+'</p>');
-        $('.bestBook'+i).eq(j).append('<p>' + origin[j].authors +' · '+origin[j].publisher+'</p>');
+        $('.bestBook'+i).eq(j).append('<img src="'+data[j].thumbnail+'"/>');
+        $('.bestBook'+i).eq(j).append('<p>' + data[j].title+'</p>');
+        $('.bestBook'+i).eq(j).append('<p>' + data[j].authors +' · '+data[j].publisher+'</p>');
       }
     });
 }
@@ -266,9 +292,9 @@ for(let i =0; i<picks.length;i++){
       let data = origin.filter((val) => {
         return val.thumbnail !== "" && val.title !='';
       });
-       $('.pickList').eq(i).append('<img src = "'+origin[0].thumbnail+'"/>');
-       $('.pickList').eq(i).append('<p>'+origin[0].title+'</p>');
-       $('.pickList').eq(i).append('<span>'+origin[0].authors+'</span>');     
+       $('.pickList').eq(i).append('<img src="'+data[0].thumbnail+'"/>');
+       $('.pickList').eq(i).append('<p>'+data[0].title+'</p>');
+       $('.pickList').eq(i).append('<span>'+data[0].authors+'</span>');     
     });
 }
 
@@ -287,10 +313,10 @@ for(let i =0; i<picks.length;i++){
       });
       const hit =$('.hit li');       
       for(let i =0;i<hit.length; i++){
-        hit.eq(i).css({'background-image':'url("'+origin[i].thumbnail+'")'});
-      let priceDot = origin[i].sale_price;
+        hit.eq(i).css({'background-image':'url("'+data[i].thumbnail+'")'});
+      let priceDot = data[i].sale_price;
       let dot = priceDot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        hit.eq(i).append('<p>' + origin[i].title +'<br>'+dot+'원</p>');
+        hit.eq(i).append('<p>' + data[i].title +'<br>'+dot+'원</p>');
       }
     });
 
@@ -308,9 +334,9 @@ for(let i =0; i<picks.length;i++){
       });
       const week =$('.weekSlide li');       
       for(let i =0;i<week.length; i++){
-        week.eq(i).append('<a href="#"><img src="'+origin[i].thumbnail+'"/></a>');
-        week.eq(i).append('<p>' + origin[i].title+'</p>');
-        week.eq(i).append('<span>' + origin[i].authors +' · '+origin[i].publisher+'</span>');
+        week.eq(i).append('<a href="#"><img src="'+data[i].thumbnail+'"/></a>');
+        week.eq(i).append('<p>' + data[i].title+'</p>');
+        week.eq(i).append('<span>' + data[i].authors +' · '+data[i].publisher+'</span>');
       }
     });
 

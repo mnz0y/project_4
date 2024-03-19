@@ -9,10 +9,10 @@ $(function () {
         if (idx > slideTxt.length - 1) {
             idx = 0;
         }
-        slideTxt.eq(idx).fadeIn('slowly');
-        slideBg.eq(idx).fadeIn('slowly');
-        slideTxt.eq(idx - 1).fadeOut('slowly');
-        slideBg.eq(idx - 1).fadeOut('slowly');
+        slideTxt.eq(idx).fadeIn('slow');
+        slideBg.eq(idx).fadeIn('slow');
+        slideTxt.eq(idx - 1).fadeOut('slow');
+        slideBg.eq(idx - 1).fadeOut('slow');
         slideBar.removeClass('aUnderline');
         slideBar.eq(idx).addClass('aUnderline');
     }
@@ -21,12 +21,13 @@ $(function () {
         if (idx == -9) {
             idx = -1;
         }
-        slideTxt.eq(idx).fadeIn('slowly');
-        slideBg.eq(idx).fadeIn('slowly');
-        slideTxt.eq(idx + 1).fadeOut('slowly');
-        slideBg.eq(idx + 1).fadeOut('slowly');
+        slideTxt.eq(idx).fadeIn('slow');
+        slideBg.eq(idx).fadeIn('slow');
+        slideTxt.eq(idx + 1).fadeOut('slow');
+        slideBg.eq(idx + 1).fadeOut('slow');
         slideBar.removeClass('aUnderline');
         slideBar.eq(idx).addClass('aUnderline');
+
     }
     setInterval(slide, 4000);
 
@@ -40,40 +41,62 @@ $(function () {
 
     //오늘의 선택
     //네비
+  
     let Lbook = $('.bookList2');
     let todayNav = $('#content2 .categoryList li');
     $(todayNav).click(function () {
         let idx = $(this).index();
-        Lbook.hide().eq(idx).show().css('display', 'flex');
+        Lbook.css('display','none');
+        Lbook.eq(idx).css('display','flex')
         todayNav.find('a').removeClass('titleFont');
         $(this).find('a').addClass('titleFont');
         return false;
     });
-    $('.bookList2 .right').click(function () {
-        $('.bookSlideWrap div:first').appendTo('.bookSlideWrap');
-        $('.bookSlideWrap').stop().animate({ marginLeft: ' -175px' });
-        $('.bookSlideWrap').css({ marginLeft: '0' });
-    });
+
+
+    
+
+    // let book = $('.bookList2:nth-of-type(2) .todayBook');
+    // console.log(Lbook.eq(0).find(book.eq(1)))
+    // idx1=0;
+    // function next(){
+    //     idx1++;
+    //     if(idx1>7){
+    //         idx1=0
+    //     }
+    //     $('.bookDetail:visible .todayBook').eq(idx1).fadeIn('slow').css('display','flex');
+    //     $('.bookDetail:visible .todayBook').eq(idx1-1).fadeOut('slow').css('display','none');
+    // }
+    // $('.bookSlideWrap:visible div:first').appendTo('.bookSlideWrap:visible');
+    // $('.bookList2 .right').click(function () {
+    //     $('.bookSlideWrap:visible').stop().animate({ marginLeft: -175 },800,function(){
+    //          $('.bookSlideWrap:visible div:first').appendTo('.bookSlideWrap:visible');
+    //         $('.bookSlideWrap:visible').css({ marginLeft: '0' });
+    //     });
+    //     next();
+    // });
+ 
+    
 
 });
 
 //배너
-function random(){
-    const bannerImg = new Array();
-    //각 이미지 경로
-    bannerImg[1]="img/banner1.jpg"
-    bannerImg[2]="img/banner2.png"
-    bannerImg[3]="img/banner3.png"
-    bannerImg[4]="img/banner4.png"
-    bannerImg[5]="img/banner5.png"
-    bannerImg[6]="img/banner6.png"
-    bannerImg[7]="img/banner7.jpg"
+// function random(){
+//     const bannerImg = new Array();
+//     //각 이미지 경로
+//     bannerImg[1]="img/banner1.jpg"
+//     bannerImg[2]="img/banner2.png"
+//     bannerImg[3]="img/banner3.png"
+//     bannerImg[4]="img/banner4.png"
+//     bannerImg[5]="img/banner5.png"
+//     bannerImg[6]="img/banner6.png"
+//     bannerImg[7]="img/banner7.jpg"
 
-    let ary = Math.floor(Math.random()*bannerImg.length);
-    if(ary===0)ary =1;
-    document.getElementsByClassName('bannerList').css('background-image') =url(bannerImg[ary]);
-    random(); 
-}
+//     let ary = Math.floor(Math.random()*bannerImg.length);
+//     if(ary===0)ary =1;
+//     document.getElementsByClassName('bannerList').css('background-image') =url(bannerImg[ary]);
+//     random(); 
+// }
 
 
 $(function () {
@@ -137,7 +160,6 @@ $(function () {
         return false;
     });
 
-    //let event = $('.eventSlide ul');
     function eSlide1(){
         $('.eventList1').stop().animate({marginLeft : '-1260px'},800,function(){
             $('.eventList1 li:first').appendTo('.eventList1');

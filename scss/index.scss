@@ -173,6 +173,9 @@
 // 오늘의 선택
 #content2 {
     height: 600px;
+    .container{
+        position: relative;
+    }
 }
 
 .titleBox {
@@ -215,7 +218,7 @@
 .bookList2 {
     height: 530px;
     @include dFlex();
-    position: relative;
+    position: absolute;
 
     &:not(:nth-child(2)) {
         display: none;
@@ -272,7 +275,7 @@
         .bookSlideWrap {
             @include dFlex(263%, center, space-evenly);
             height: 400px;
-            margin-left: -175px;
+            margin-left: 0px;
 
             .todaySlideBook {
                 height: 300px;

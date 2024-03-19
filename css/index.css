@@ -147,6 +147,9 @@
 #content2 {
   height: 600px;
 }
+#content2 .container {
+  position: relative;
+}
 
 .titleBox {
   display: flex;
@@ -211,7 +214,7 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  position: absolute;
 }
 .bookList2:not(:nth-child(2)) {
   display: none;
@@ -270,7 +273,7 @@
   align-items: center;
   justify-content: space-evenly;
   height: 400px;
-  margin-left: -175px;
+  margin-left: 0px;
 }
 .bookList2 .bookSlide .bookSlideWrap .todaySlideBook {
   height: 300px;
