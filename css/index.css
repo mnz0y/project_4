@@ -273,7 +273,7 @@
   align-items: center;
   justify-content: space-evenly;
   height: 400px;
-  margin-left: 0px;
+  margin-left: -175px;
 }
 .bookList2 .bookSlide .bookSlideWrap .todaySlideBook {
   height: 300px;
@@ -300,9 +300,11 @@
   border-radius: 50%;
   border: 1px solid #999;
   display: inline-block;
+  cursor: pointer;
   background-image: url(../img/left.png);
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
 .bookList2 .right {
   position: absolute;
@@ -312,9 +314,11 @@
   border-radius: 50%;
   border: 1px solid #999;
   display: inline-block;
+  cursor: pointer;
   background-image: url(../img/right.png);
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
 
 #content3 {
@@ -540,10 +544,12 @@
   border-radius: 50%;
   border: 1px solid #999;
   display: inline-block;
+  cursor: pointer;
   background-image: url(../img/left.png);
   background-repeat: no-repeat;
   background-size: cover;
   margin-right: 15px;
+  cursor: pointer;
 }
 .buttonBox .right4 {
   width: 50px;
@@ -551,9 +557,11 @@
   border-radius: 50%;
   border: 1px solid #999;
   display: inline-block;
+  cursor: pointer;
   background-image: url(../img/right.png);
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
 
 .bookbox4 {
@@ -861,10 +869,12 @@
   border-radius: 50%;
   border: 1px solid #999;
   display: inline-block;
+  cursor: pointer;
   background-image: url(../img/left.png);
   background-repeat: no-repeat;
   background-size: cover;
   margin-right: 20px;
+  cursor: pointer;
 }
 .btnBox .right7 {
   width: 50px;
@@ -872,9 +882,11 @@
   border-radius: 50%;
   border: 1px solid #999;
   display: inline-block;
+  cursor: pointer;
   background-image: url(../img/right.png);
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
 
 .hitList {
@@ -936,11 +948,13 @@
   border-radius: 50%;
   border: 1px solid #999;
   display: inline-block;
+  cursor: pointer;
   background-image: url(../img/left.png);
   background-repeat: no-repeat;
   background-size: cover;
   left: -55px;
   top: 55%;
+  cursor: pointer;
 }
 #content9 .container .right {
   position: absolute;
@@ -949,11 +963,13 @@
   border-radius: 50%;
   border: 1px solid #999;
   display: inline-block;
+  cursor: pointer;
   background-image: url(../img/right.png);
   background-repeat: no-repeat;
   background-size: cover;
   right: -55px;
   top: 55%;
+  cursor: pointer;
 }
 
 .weekSlide {

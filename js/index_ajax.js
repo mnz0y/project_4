@@ -270,7 +270,7 @@ for(let i =0; i<best.length;i++){
       
       for(let j=0;j<10;j++){
 
-        $('.bestBook'+i).eq(j).append('<img src="'+data[j].thumbnail+'"/>');
+        $('.bestBook'+i).eq(j).append('<a href="#"><img src="'+data[j].thumbnail+'"/></a>');
         $('.bestBook'+i).eq(j).append('<p>' + data[j].title+'</p>');
         $('.bestBook'+i).eq(j).append('<p>' + data[j].authors +' · '+data[j].publisher+'</p>');
       }

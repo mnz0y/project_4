@@ -275,7 +275,7 @@
         .bookSlideWrap {
             @include dFlex(263%, center, space-evenly);
             height: 400px;
-            margin-left: 0px;
+            margin-left: -175px;
 
             .todaySlideBook {
                 height: 300px;
@@ -300,11 +300,13 @@
         position: absolute;
         left: -55px;
         @include leftButton;
+        cursor: pointer;
     }
     .right {
         position: absolute;
         right: -55px;
         @include rightButton;
+        cursor: pointer;
     }
 }
 
@@ -499,10 +501,12 @@
     .left4 {
         @include leftButton();
         margin-right: 15px;
+        cursor: pointer;
     }
 
     .right4 {
         @include rightButton();
+        cursor: pointer;
     }
 }
 
@@ -777,8 +781,8 @@
 }
 .btnBox{
     margin: 10% 0;
-    .left7{@include leftButton; margin-right: 20px;}
-    .right7{@include rightButton}
+    .left7{@include leftButton; margin-right: 20px;cursor: pointer;}
+    .right7{@include rightButton;cursor: pointer;}
 }
 
 // 히트 슬라이드
@@ -832,13 +836,15 @@
         position: absolute;
         @include leftButton;
         left:-55px;
-        top: 55%; 
+        top: 55%;
+        cursor: pointer; 
     }
     .right{
         position: absolute;
         @include rightButton;
         right: -55px;
         top: 55%;
+        cursor: pointer;
     }
     }
 }
