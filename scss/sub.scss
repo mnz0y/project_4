@@ -1,0 +1,146 @@
+@charset "UTF-8";
+@import "var.scss";
+
+.bookInfo{
+    width: 100%;
+    height: 700px;
+    .topBar{
+        height: 40px;
+        .main{
+            height: 40px;
+            @include dFlex(450px,center);
+            &::before{
+                content: "";
+                width: 15px;
+                height: 12px;
+                @include backGround(url(../img/home.png),center);
+                
+            }
+            &>li{
+                width: 100px;
+                height: 18px;
+                font-size: 13px;
+                text-align: center;
+                
+            }
+            &>li:nth-of-type(2n){
+                width: 5px;
+            }
+            &>li:nth-of-type(2n-1) a::after{
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                width: 13px;
+                height: 13px;
+                margin-left: 3px;
+                @include backGround(url(../img/more.png),center)
+            }
+        }
+    }
+}
+.topHide{
+        border: 1px solid #999;
+        border-radius: 20px;
+        width: 150px;
+        padding: 10px;
+        margin-top: 10px;
+        text-align: left;
+        display: none;
+   li{
+    padding: 2px;
+   }
+}
+.sub{
+   display: none;
+   width: 300px;
+}
+.txtBold{font-weight: bold;}
+.title{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    .share{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 10px;
+        right: 10px;
+        border-radius: 50%;
+        border: 1px solid #999;
+        padding: 8px;
+            img{
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+            }
+    }
+}
+.bookBox{
+    @include dFlex(100%);
+    height: 100%;
+}
+.author{
+    width: 30%;
+    &>p{
+        line-height: 35px;
+        margin: 10px 0;
+        
+        span{
+            font-weight: 450;
+        }
+        small{
+            color: #777;
+        }
+        &:nth-child(2){
+            font-size: small;
+        }
+        &:nth-child(2):hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        strong{
+            font-size: medium;
+            margin-right: 10px;
+            &::before{
+                content: "";
+                display: inline-block;
+                width: 23px;
+                height: 20px;
+                margin: -3px  5px -3px 0;
+                @include backGround(url(../img/crown.png),center);
+            }
+        }
+
+    }
+}
+.countBox{
+    width: 90%;
+    height: 130px;
+    margin: 25px 0;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    display: flex;
+    div{
+        width: 50%;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    }
+
+}
+.reviewL{
+    width: 50%;
+    height: 100%;
+}
+.reviewR{
+    width: 50%;
+    height: 100%;
+}
+.bookCover{
+    width: 40%;
+}
+.bookDeliver{
+    width: 30%;
+}

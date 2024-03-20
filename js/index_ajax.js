@@ -9,7 +9,7 @@ $.ajax({
     //오늘의 책 왼쪽
     const origin = msg.documents;
       let data = origin.filter((val) => {
-        return val.thumbnail !== "" && val.title !='';
+        return val.thumbnail !== "" && val.title !='' && val.authors !='';
       });
     const today = $('.Lbook0');
 
@@ -47,7 +47,7 @@ $.ajax({
     //오늘의 책 왼쪽
     const origin = msg.documents;
       let data = origin.filter((val) => {
-        return val.thumbnail !== "" && val.title !='';
+        return val.thumbnail !== "" && val.title !='' && val.authors !='';
       });
     const today = $('.Lbook1');
 
@@ -86,11 +86,10 @@ $.ajax({
     //오늘의 책 왼쪽
     const origin = msg.documents;
       let data = origin.filter((val) => {
-        return val.thumbnail !== "" && val.title !='';
+        return val.thumbnail !== "" && val.title !=''&& val.authors !='';
       });
-      console.log(data);
     const today = $('.Lbook2');
-
+      
     for (let i = 0; i < today.length; i++) {
       $('.Lbook2').eq(i).prepend('<a href="#"><img src="' + data[i].thumbnail + '"/></a>');
       $('.book2').eq(i).append('<h2>' + data[i].title + '</h2>');
@@ -126,7 +125,7 @@ $.ajax({
     //오늘의 책 왼쪽
     const origin = msg.documents;
       let data = origin.filter((val) => {
-        return val.thumbnail !== "" && val.title !='';
+        return val.thumbnail !== "" && val.title !='' && val.authors !='';
       });
     const today = $('.Lbook3');
 
@@ -164,7 +163,7 @@ $.ajax({
     //오늘의 책 왼쪽
     const origin = msg.documents;
       let data = origin.filter((val) => {
-        return val.thumbnail !== "" && val.title !='';
+        return val.thumbnail !== "" && val.title !='' && val.authors !='';
       });
     const today = $('.Lbook4');
 
@@ -202,7 +201,7 @@ $.ajax({
     //오늘의 책 왼쪽
     const origin = msg.documents;
       let data = origin.filter((val) => {
-        return val.thumbnail !== "" && val.title !='';
+        return val.thumbnail !== "" && val.title !='' && val.authors !='';
       });
     const today = $('.Lbook5');
 
@@ -265,7 +264,7 @@ for(let i =0; i<best.length;i++){
     .done(function (msg) {
       const origin = msg.documents;
       let data = origin.filter((val) => {
-        return val.thumbnail !== "" && val.title !='';
+        return val.thumbnail !== "" && val.title !='' && val.authors !='';
       });
       
       for(let j=0;j<10;j++){

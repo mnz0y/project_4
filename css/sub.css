@@ -1,0 +1,168 @@
+.bookInfo {
+  width: 100%;
+  height: 700px;
+}
+.bookInfo .topBar {
+  height: 40px;
+}
+.bookInfo .topBar .main {
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 450px;
+  align-items: center;
+  justify-content: space-between;
+}
+.bookInfo .topBar .main::before {
+  content: "";
+  width: 15px;
+  height: 12px;
+  background-image: url(../img/home.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bookInfo .topBar .main > li {
+  width: 100px;
+  height: 18px;
+  font-size: 13px;
+  text-align: center;
+}
+.bookInfo .topBar .main > li:nth-of-type(2n) {
+  width: 5px;
+}
+.bookInfo .topBar .main > li:nth-of-type(2n-1) a::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 13px;
+  height: 13px;
+  margin-left: 3px;
+  background-image: url(../img/more.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.topHide {
+  border: 1px solid #999;
+  border-radius: 20px;
+  width: 150px;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: left;
+  display: none;
+}
+.topHide li {
+  padding: 2px;
+}
+
+.sub {
+  display: none;
+  width: 300px;
+}
+
+.txtBold {
+  font-weight: bold;
+}
+
+.title {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+.title .share {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  border: 1px solid #999;
+  padding: 8px;
+}
+.title .share img {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+
+.bookBox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.author {
+  width: 30%;
+}
+.author > p {
+  line-height: 35px;
+  margin: 10px 0;
+}
+.author > p span {
+  font-weight: 450;
+}
+.author > p small {
+  color: #777;
+}
+.author > p:nth-child(2) {
+  font-size: small;
+}
+.author > p:nth-child(2):hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.author > p strong {
+  font-size: medium;
+  margin-right: 10px;
+}
+.author > p strong::before {
+  content: "";
+  display: inline-block;
+  width: 23px;
+  height: 20px;
+  margin: -3px 5px -3px 0;
+  background-image: url(../img/crown.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.countBox {
+  width: 90%;
+  height: 130px;
+  margin: 25px 0;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  display: flex;
+}
+.countBox div {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.reviewL {
+  width: 50%;
+  height: 100%;
+}
+
+.reviewR {
+  width: 50%;
+  height: 100%;
+}
+
+.bookCover {
+  width: 40%;
+}
+
+.bookDeliver {
+  width: 30%;
+}

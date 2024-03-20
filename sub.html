@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교보문고</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/sub.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 헤더 -->
+        <header>
+            <div class="banner">
+                <img src="img/bannerTop.jpg" alt="banner">
+            </div>
+            <div class="container">
+                <div class="searchTop">
+                    <div class="logo"></div>
+                    <div class="search">
+                        <select name="검색" id="searchBox">
+                            <option value="통합검색">통합검색</option>
+                            <option value="교보문고">교보문고</option>
+                            <option value="eBook">eBook</option>
+                            <option value="sam">sam</option>
+                            <option value="핫트랙스">핫트랙스</option>
+                        </select>
+                        <input type="search" id="searchBar" placeholder="노벨문학상 수상 작가 욘 포세 최신작">
+                        <div class="searchImg"><a href="#"></a></div>
+                    </div>
+                    <div class="login">
+                        <div class="loginBar">
+                            <ul class="logT">
+                                <li><a href="#">회원가입</a></li>
+                                <li>|</li>
+                                <li><a href="#">로그인</a></li>
+                                <li>|</li>
+                                <li><a href="#">회원혜택</a></li>
+                                <li>|</li>
+                                <li><a href="#">고객센터</a></li>
+                            </ul>
+                        </div>
+                        <div class="loginIcon">
+                            <div class="cart"><a href="#"></a></div>
+                            <div class="loginG"><a href="#"></a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 네비게이션 -->
+                <div class="nav">
+                    <div class="navIcon"></div>
+                    <ul class="navBar">
+                        <li><a href="#">대학교재🎓</a></li>
+                        <li><a href="#">어린이🧒</a></li>
+                        <li><a href="#">베스트</a></li>
+                        <li><a href="#">신상품</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">사은품</a></li>
+                        <li><a href="#">PICKS</a></li>
+                        <li><a href="#">CASTing</a></li>
+                        <li><a href="#">교보ONLY</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- 책정보 -->
+        <div class="bookInfo">
+            <div class="container">
+                <div class="topBar">
+                    <ul class="main">
+                        <li><a href="#">국내도서</a>
+                            <div class="topHide">
+                                <ul>
+                                    <li class="txtBold"><a href="#">국내도서</a></li>
+                                    <li><a href="#">서양도서</a></li>
+                                    <li><a href="#">일본도서</a></li>
+                                    <li><a href="#">교보Only</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>/</li>
+                        <li><a href="#">자기계발</a>
+                            <div class="topHide sub">
+                                <ul>
+                                    <li><a href="#">소설</a></li>
+                                    <li><a href="#">시/에세이</a></li>
+                                    <li><a href="#">인문</a></li>
+                                    <li><a href="#">가정/육아</a></li>
+                                    <li><a href="#">요리</a></li>
+                                    <li><a href="#">건강</a></li>
+                                    <li><a href="#">취미/실용/스포츠</a></li>
+                                    <li><a href="#">경제/경영</a></li>
+                                    <li class="txtBold"><a href="#">자기계발</a></li>
+                                    <li><a href="#">정치/사회</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">역사/문화</a></li>
+                                    <li><a href="#">종교</a></li>
+                                    <li><a href="#">예술/대중문화</a></li>
+                                    <li><a href="#">중/고등참고서</a></li>
+                                    <li><a href="#">기술/공학</a></li>
+                                    <li><a href="#">외국어</a></li>
+                                    <li><a href="#">과학</a></li>
+                                    <li><a href="#">취업/수험서</a></li>
+                                    <li><a href="#">여행</a></li>
+                                    <li><a href="#">컴퓨터/IT</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">잡지</a></li>
+                                    <li><a href="#">청소년</a></li>
+                                    <li><a href="#">초등참고서</a></li>
+                                    <li><a href="#">유아(0~7세)</a></li>
+                                    <li><a href="#">어린이(초등)</a></li>
+                                    <li><a href="#">만화</a></li>
+                                    <li><a href="#">대학교재</a></li>
+                                    <li><a href="#">한국소개도서</a></li>
+                                    <li><a href="#">교보오리지널</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>/</li>
+                        <li><a href="#">성공/처세</a>
+                            <div class="topHide">
+                                <ul>
+                                    <li class="txtBold"><a href="#">성공/처세</a></li>
+                                    <li><a href="#">자기능력계발</a></li>
+                                    <li><a href="#">비지니스능력계발</a></li>
+                                    <li><a href="#">인간관계</a></li>
+                                    <li><a href="#">화술/협상</a></li>
+                                    <li><a href="#">청소년자기계발</a></li>
+                                    <li><a href="#">오디오북</a></li>
+                                    <li><a href="#">전자책단말기/전자기기</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>/</li>
+                        <li><a href="#">자기관리/처세</a>
+                            <div class="topHide">
+                                <ul>
+                                    <li class="txtBold"><a href="#">자기관리/처세</a></li>
+                                    <li><a href="#">청년훈</a></li>
+                                    <li><a href="#">삶의지혜/조언</a></li>
+                                    <li><a href="#">직장처세</a></li>
+                                    <li><a href="#">성공스토리</a></li>
+                                    <li><a href="#">카네기시리즈</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="title">
+                    <p><h2>프리 웨이</h2>
+                    너를 어디든 데려가줄 자유로운 삶의 방식</p>
+                    <div class="share"><img src="img/share.png" alt="share"></div>
+                </div>
+                <div class="bookBox">
+                    <div class="author">
+                        <p><span>드로운앤드류 저자(글)</span><br>
+                            <small>웅진지식하우스 · 2024년 03월 22일</small>
+                        </p>
+                        <p><strong>주간베스트</strong> 국내도서 <b>89</b>위 · 자기계발 <b>15</b>위 </p>
+                        <div class="countBox">
+                               <div class="reviewL">
+                                <span>10.0</span>
+                                <p><img src="img/klover.png" alt="별점">
+                                    <img src="img/klover.png" alt="별점">
+                                    <img src="img/klover.png" alt="별점">
+                                    <img src="img/klover.png" alt="별점">
+                                </p>
+                                <span>(<b>5</b>개의 리뷰)</span>
+                               </div>
+                               <div class="reviewR">
+                                <img src="img/quotes.png" alt="quotes">
+                                <p>최고예요</p>
+                                <span>(<b>40%</b>의 구매자)</span>
+                               </div>
+                        </div>
+                    </div>
+                    <div class="bookCover"></div>
+                    <div class="bookDeliver">
+                        <div class="prod_price">
+                        <span>MD의 선택</span>
+                        <span>무료배송</span>
+                        <span>소득공제</span>
+                        <p><strong>10%</strong> <span>16,200</span>원 <small>18,000원</small></p>
+                        </div>
+                        <div class="prod_box">
+                            <strong>적립/혜택</strong>
+                            <span>900P</span>
+                        </div>
+                        <div class="prod_box">
+                            <p><strong>배송안내</strong><span>무료배송</span></p>
+                            <p>3/22(금)출고예정</p>
+                            <p>서울시 종로구 종로1 <button>변경</button></p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 상세페이지 -->
+        <div class="bookDetail">
+            <div class="container">
+                <!-- 상세페이지 네비 -->
+                <div class="detailNav"></div>
+
+                <!-- 상세페이지 왼쪽 -->
+                <div class="leftSide">
+                <!-- 이벤트  -->
+                <div class="bookEvent">
+
+                    <!-- 이 책의 이벤트 -->
+                    <div class="event"></div>
+                    <!-- 북카드 -->
+                    <div class="bookCard"></div>
+                    <!-- 함께 구매한 책 -->
+                    <div class="buyBook"></div>
+                    <!-- 책 상세페이지 -->
+                    <div class="detailBox"></div>
+
+                </div>
+                <!-- 상품정보 -->
+                <div class="productInfo">
+
+                    <!-- 책소개 -->
+                    <div class="bookIntro"></div>
+                    <!-- 북 트레일러 -->
+                    <div class="bookVideo"></div>
+                    <!-- 작가정보 -->
+                    <div class="authorDetail"></div>
+                    <!-- 목차 -->
+                    <div class="contents"></div>
+                    <!-- 추천사 -->
+                    <div class="command"></div>
+                    <!-- 책속으로 -->
+                    <div class="bookIn"></div>
+                    <!-- 출판사 서평 -->
+                    <div class="publisher"></div>
+                    <!-- 기본정보 -->
+                    <div class="info"></div>
+
+                </div>
+
+                <!-- 리뷰 -->
+                <div class="review">
+                    <div class="klover"></div>
+                    <div class="reviewBox"></div>
+                    <div class="reviewText"></div>
+                </div>
+
+                <!-- 교환/반품/품절 -->
+                <div class="refund"></div>
+
+                </div>
+                <!-- 상세페이지 오른쪽 -->
+                <div class="rightSide">
+                    <!-- 기분 좋은 발견 -->
+                    <div class="find"></div>
+                    <!-- 이 분야의 베스트 -->
+                    <div class="thisBest"></div>
+                    <!-- 배너 -->
+                    <div class="banner1"></div>
+                    <!-- 이 분야의 신간 -->
+                    <div class="thisNew"></div>
+                    <!-- 배너광고 -->
+                    <div class="banner2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 풋터 -->
+        <footer>
+
+            <div class="notice">
+                <div class="container">
+
+                    <div class="noticeBar">
+                        <h4>공지사항</h4>
+                        <p>우리카드 업무 중단 관련 안내(3/9 ~3/10)</p>
+                        <b><a href="#">더보기 +</a></b>
+                    </div>
+                    <div class="noticeBar">
+                        <h4>당첨자발표</h4>
+                        <p>[판타지][100% 캐시백] 천직이 프로파일러 당첨자 발표</p>
+                        <b><a href="#">더보기 +</a></b>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 풋터 네비게이션 -->
+            <div class="noticeMenu">
+                <div class="container">
+                    <div class="groupBox">
+                        <a href="#"><b>회원혜택</b></a>
+                        <ul class="groupList">
+                            <li><a href="#">Prestige Lounge</a></li>
+                            <li><a href="#">신규회원 혜택</a></li>
+                            <li><a href="#">등급별 혜택</a></li>
+                            <li><a href="#">출석체크</a></li>
+                        </ul>
+                    </div>
+                    <div class="groupBox">
+                        <a href="#"><b>쇼핑 TIP</b></a>
+                        <ul class="groupList">
+                            <li><a href="#">제휴포인트/상품권</a></li>
+                            <li><a href="#">교보문고 기프트카드</a></li>
+                            <li><a href="#">대량구매</a></li>
+                            <li><a href="#">리딩트리서비스(독서경영)</a></li>
+                        </ul>
+                    </div>
+                    <div class="groupBox">
+                        <a href="#"><b>빠른서비스</b></a>
+                        <ul class="groupList">
+                            <li><a href="#">북클럽카드 등록</a></li>
+                            <li><a href="#">영수증 후 적립</a></li>
+                            <li><a href="#">교보캐시 조회·충전</a></li>
+                            <li><a href="#">교보e캐시 조회·충전</a></li>
+                            <li><a href="#">기프트카드 조회·충전</a></li>
+                            <li><a href="#">협력사 여러분</a></li>
+                        </ul>
+                    </div>
+                    <div class="groupBox">
+                        <a href="#"><b>교보문고 소식</b></a>
+                        <ul class="groupList">
+                            <li><a href="https://www.instagram.com/kyobobook_official/" target="_blank">인스타그램(교보문고)</a>
+                            </li>
+                            <li><a href="https://www.instagram.com/kyobobook_online/" target="_blank">인스타그램(인터넷교보문고)</a>
+                            </li>
+                            <li><a href="https://www.facebook.com/kyobobook/" target="_blank">페이스북(교보문고)</a></li>
+                            <li><a href="https://www.facebook.com/kyobobookonline?orderClick=rwk/"
+                                    target="_blank">페이스북(인터넷교보문고)</a></li>
+                            <li><a href="https://twitter.com/kyobobookstory?orderClick=rwk" target="_blank">트위터</a></li>
+                            <li><a href="https://www.youtube.com/c/kbooknews" target="_blank">유튜브</a></li>
+                        </ul>
+                    </div>
+                    <div class="groupBox">
+                        <a href="#"><b>FAQ</b></a>
+                        <ul class="groupList">
+                            <li><a href="#">주문·결제</a></li>
+                            <li><a href="#">eBook</a></li>
+                            <li><a href="#">도서·상품정보</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+             <!-- 풋터 회사정보 -->
+            <div class="container">
+                <div class="footerIcon">
+                    <div class="footerImg"></div>
+                    <div class="selectBox">
+                        <select name="familysite" id="familysite">
+                            <option value="familysite">Family Site</option>
+                            <option value="교보생명">교보생명</option>
+                            <option value="교보증권">교보증권</option>
+                            <option value="교보DTS">교보DTS</option>
+                            <option value="교보리얼코">교보리얼코</option>
+                            <option value="교보악사자산운용">교보악사자산운용</option>
+                            <option value="교보라이프플래닛생명">교보라이프플래닛생명</option>
+                        </select>
+                        <div class="sns"><a href="https://www.youtube.com/c/kbooknews" target="_blank"></a></div>
+                        <div class="sns"><a href="https://www.facebook.com/kyobobook/" target="_blank"></a></div>
+                        <div class="sns"><a href="https://www.instagram.com/kyobobook_official/" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="detailWrap">
+                    <div class="footerDetail">
+                        <ul class="footerNav">
+                            <li><a href="#">회사소개</a></li>
+                            <li class="dash">|</li>
+                            <li><a href="#">이용약관</a></li>
+                            <li class="dash">|</li>
+                            <li><a href="#"><b>개인정보처리방침</b></a></li>
+                            <li class="dash">|</li>
+                            <li><a href="#">청소년보호정책</a></li>
+                            <li class="dash">|</li>
+                            <li><a href="#">대량주문안내</a></li>
+                            <li class="dash">|</li>
+                            <li><a href="#">협력사여러분</a></li>
+                            <li class="dash">|</li>
+                            <li><a href="#">채용정보</a></li>
+                            <li class="dash">|</li>
+                            <li><a href="#">광고소개</a></li>
+
+                        </ul>
+                        <div class="footerDetail">
+                            <span class="detailTxt">대표이사 : 안병현, 김상훈</span>
+                            <span class="dash">|</span>
+                            <span class="detailTxt">서울특별시 종로구 종로 1 </span>
+                            <span class="dash">|</span>
+                            <span class="detailTxt">사업자등록번호 : 102-81-11670</span>
+                            <br>
+                            <span class="detailTxt"><b>대표전화 : 1544-1900(발신자 부담전화)</b></span>
+                            <span class="dash">|</span>
+                            <span class="detailTxt">FAX : 0502-987-5711(지역번호 공통)</span>
+                            <span class="dash">|</span>
+                            <span class="detailTxt">서울특별시 통신판매업신고번호 : 제 653호</span>
+                            <button>사업자정보확인</button>
+
+                        </div>
+                        <p class="copyright">© KYOBO BOOK CENTRE</p>
+                    </div>
+                    <div class="footerToss">
+                        <span>토스페이먼츠 구매안전 서비스</span>
+                        <button>서비스 가입 확인</button>
+                        <br>
+                        <span>
+                            고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 <br>
+                            토스페이먼츠의 구매안전서비스를 이용하실 수 있습니다.
+                        </span>
+
+                        <div class="tossImg">
+                            <img src="img/tossImg.png" alt="logoImg">
+                            <span>정보보호관리체계 <br>
+                                ISMS 인증획득</span>
+                            <span>
+                                [인증범위] 인터넷 교보문고 및 브랜드 서비스 운영 <br>
+                                [유효기간] 2023. 11. 15 ~ 2026. 11 .14
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+        <!-- 픽스박스 -->
+        <div class="fixBox">
+            <div class="fix1"></div>
+            <div class="fix2"></div>
+            <div class="fix3"><a href="#">TOP</a></div>
+        </div>
+
+        <!-- 상품금액 -->
+        <div class="priceBox"></div>
+
+    </div>
+
+    <script src="js/index_ajax.js"></script>
+</body>
+
+</html>
