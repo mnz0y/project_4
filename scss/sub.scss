@@ -1,67 +1,102 @@
 @charset "UTF-8";
 @import "var.scss";
 
-.bookInfo{
+// 책정보
+.bookInfo {
     width: 100%;
-    height: 700px;
-    .topBar{
+    height: 900px;
+
+    // 카테고리탭
+    .topBar {
         height: 40px;
-        .main{
+
+        .main {
             height: 40px;
-            @include dFlex(450px,center);
-            &::before{
+            @include dFlex(450px, center);
+
+            &::before {
                 content: "";
                 width: 15px;
                 height: 12px;
-                @include backGround(url(../img/home.png),center);
-                
+                @include backGround(url(../img/home.png), center);
+
             }
-            &>li{
+
+            &>li {
                 width: 100px;
                 height: 18px;
                 font-size: 13px;
                 text-align: center;
-                
+
+                &:hover .topHide {
+                    display: block;
+                    z-index: 100;
+                }
             }
-            &>li:nth-of-type(2n){
+
+            &>li:nth-of-type(2n) {
                 width: 5px;
             }
-            &>li:nth-of-type(2n-1) a::after{
+
+            &>li:nth-of-type(2n-1)>a::after {
                 content: "";
                 display: inline-block;
                 vertical-align: middle;
                 width: 13px;
                 height: 13px;
                 margin-left: 3px;
-                @include backGround(url(../img/more.png),center)
+                @include backGround(url(../img/more.png), center)
             }
         }
     }
 }
-.topHide{
-        border: 1px solid #999;
-        border-radius: 20px;
-        width: 150px;
-        padding: 10px;
-        margin-top: 10px;
-        text-align: left;
-        display: none;
-   li{
-    padding: 2px;
-   }
+
+.topHide {
+    border: 1px solid #999;
+    border-radius: 20px;
+    width: 170px;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: left;
+    display: none;
+    background-color: #fefefe;
+    position: absolute;
+    z-index: 100;
+
+    li {
+        padding: 2px;
+    }
 }
-.sub{
-   display: none;
-   width: 300px;
+
+//자기계발카테고리
+.sub {
+    width: 350px;
+    height: 250px;
+
+    ul {
+        float: left;
+        margin-right: 20px;
+    }
 }
-.txtBold{font-weight: bold;}
-.title{
+
+// 액티브클래스
+.txtBold {
+    font-weight: bold;
+}
+
+// 책제목
+.title {
     width: 100%;
     height: 100px;
+    margin-top: 50px;
     text-align: center;
     padding: 10px;
     position: relative;
-    .share{
+    h2{
+        line-height: 60px;
+    }
+
+    .share {
         position: absolute;
         width: 40px;
         height: 40px;
@@ -70,77 +105,382 @@
         border-radius: 50%;
         border: 1px solid #999;
         padding: 8px;
-            img{
-                display: inline-block;
-                width: 15px;
-                height: 15px;
-            }
+
+        img {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+        }
     }
 }
-.bookBox{
-    @include dFlex(100%);
+
+.bookBox {
+    @include dFlex(100%,flex-start);
     height: 100%;
+    margin-top: 50px;
 }
-.author{
-    width: 30%;
-    &>p{
+
+// 책정보 왼쪽
+.author {
+    width: 24%;
+
+    &>p {
         line-height: 35px;
         margin: 10px 0;
-        
-        span{
+
+        span {
             font-weight: 450;
         }
-        small{
+
+        small {
             color: #777;
         }
-        &:nth-child(2){
+
+        &:nth-child(2) {
             font-size: small;
         }
-        &:nth-child(2):hover{
+
+        &:nth-child(2):hover {
             text-decoration: underline;
             cursor: pointer;
         }
-        strong{
+
+        strong {
             font-size: medium;
             margin-right: 10px;
-            &::before{
+
+            &::before {
                 content: "";
                 display: inline-block;
                 width: 23px;
                 height: 20px;
-                margin: -3px  5px -3px 0;
-                @include backGround(url(../img/crown.png),center);
+                margin: -3px 5px -3px 0;
+                @include backGround(url(../img/crown.png), center);
             }
         }
 
     }
 }
-.countBox{
-    width: 90%;
+
+//리뷰박스
+.countBox {
+    width: 100%;
     height: 130px;
     margin: 25px 0;
     border: 1px solid #ddd;
     border-radius: 15px;
-    display: flex;
-    div{
+
+    a {
+        height: 100%;
+        @include dFlex(100%, center, space-evenly);
+    }
+
+    div {
         width: 50%;
-    height: 100%;
-    padding: 20px;
-    text-align: center;
+        height: 80px;
+        text-align: center;
     }
 
 }
-.reviewL{
+
+.reviewL {
+    border-right: 1px solid #eee;
+
+
+    span {
+        &:nth-child(1) {
+            color: $green;
+
+            font : {
+                size: 18px;
+                weight: bold;
+            }
+
+        }
+
+        &:nth-child(3) {
+            font-size: 12px;
+        }
+    }
+
+    p {
+        margin-top: 10px;
+    }
+
+    img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.reviewR {
+    img {
+        width: 18px;
+        height: 18px;
+    }
+
+    p {
+        color: $mainColor;
+
+        font : {
+            size: 20px;
+            weight: bold;
+        }
+
+        padding: 3px 0;
+    }
+
+    span {
+        font-size: 12px;
+    }
+}
+
+//책 커버 이미지
+.bookCover {
     width: 50%;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    .turnBook{
+        width: 300px;
+        height: 500px;
+        margin: 0 auto;
+        position: relative;
+        transform-style: preserve-3d;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+        transition: 0.5s;
+        
+        &:hover{
+            transform: rotateY(35deg);
+            cursor: url(../img/flip.svg), pointer ;
+        }
+        &.rotate{
+            transform: rotateY(180deg);
+        }
+        
+        img{
+            box-shadow: 1px 1px 5px #999 ;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        };
+
+        &::before{
+            content: "";
+            width: 30px;
+            height: 100%;
+            @include backGround(url(../img/flipBook_A.jpg),center);
+            position: absolute;
+            transform: rotateY(90deg);
+            transform-origin: left;
+        }
+        &::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            @include backGround(url(../img/flipBook_B.jpg),center);
+            transform-origin: center;
+            transform: rotateY(180deg) translateZ(30px);
+        }
+        
+    }
+}
+
+
+//책 배송정보
+.bookDeliver {
+    width: 24%;
     height: 100%;
+    button:hover{
+        background-color: #eee;
+    }
+    &>button{
+        width: 100%;
+        height: 40px;
+        padding: 1px 5px;
+                background-color: #fefefe;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+        img{
+            width: 15px;
+            height: 20px;
+            vertical-align: sub;
+        }
+    }
+    
 }
-.reviewR{
-    width: 50%;
-    height: 100%;
+
+.prod_price {
+    border-bottom: 1px solid #eee;
+    height: 100px;
+    margin-top: 10px;
+
+    p {
+        font-size: 25px;
+        padding-top: 25px;
+
+        strong {
+            color: $green;
+        }
+
+        span {
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        small {
+            font-size: 16px;
+            text-decoration: line-through;
+            color: #999;
+        }
+    }
 }
-.bookCover{
-    width: 40%;
+
+.btnWrap {
+    span {
+        border: 1px solid #999;
+        color: #999;
+        padding: 0 5px;
+        border-radius: 5px;
+        font-size: 12px;
+
+        &:nth-child(1) {
+            color: $mainColor;
+            border: 1px solid $mainColor;
+        }
+    }
 }
-.bookDeliver{
-    width: 30%;
+
+.prod_box {
+
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    
+
+    &:nth-child(2) {
+        @include dFlex();
+        height: 60px;
+
+        span {
+            color: $green;
+            font-weight: bold;
+        }
+    }
+
+    &:nth-child(3) {
+        @include dFlex();
+        height: 120px;
+        padding: 10px 0;
+
+        p {
+            width: 100%;
+
+            &:nth-child(1) {
+                @include dFlex();
+            }
+
+            &:nth-child(2) {
+                font-weight: bold;
+            }
+
+            &:nth-child(3) {
+                color: #777;
+            }
+
+            &:not(:nth-child(1)) {
+                text-align: right;
+            }
+
+            button {
+                padding: 1px 5px;
+                background-color: #fefefe;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+
+                font : {
+                    size: 13px;
+                    weight: 500;
+                }
+
+                img {
+                    width: 7px;
+                    height: 7px;
+                    margin-bottom: 1px;
+                }
+               &:hover{
+                    background-color: #eee;
+                }
+            }
+
+
+        }
+    }
+
+    &:nth-child(4) {
+        @include dFlex();
+        border: none;
+        height: 90px;
+
+        p {
+            color: #777;
+            font-size: 13px;
+        }
+
+        button {
+            color: $mainColor;
+            padding: 3px 10px;
+            background-color: #fefefe;
+            border: 1px solid $mainColor;
+            border-radius: 5px;
+            font-size: 12px;
+            img{
+                width: 12px;
+                height: 18px;
+                vertical-align: sub;
+            }
+            &:hover{
+                background-color: #eee;
+            }
+        }
+    }
 }
+
+//상세페이지
+//네비
+.detailNav{
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #999;
+    ul{
+        @include dFlex(100%,center,flex-start);
+        height: 100px;
+        li{
+            width: 150px;
+            height: 100%;
+            a{
+                display: inline-block;
+                height: 100%;
+                padding-top: 40px;
+               font-size: 18px;
+               color: #999;
+            }
+        }
+    }
+}
+.underline{ border-bottom: 2px solid #333;font-weight: bold;}
+
+.bookDetail{
+    &>.container{
+        @include dFlex(1260px,flex-start);
+        .leftSide{
+            width: 65%;
+        }
+        .rightSide{
+            width: 30%;
+            
+        }
+    }
+}
+

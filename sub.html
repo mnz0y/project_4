@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/sub.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/sub.js"></script>
 </head>
 
 <body>
@@ -74,6 +75,7 @@
         <!-- 책정보 -->
         <div class="bookInfo">
             <div class="container">
+                <!-- 카테고리탭 -->
                 <div class="topBar">
                     <ul class="main">
                         <li><a href="#">국내도서</a>
@@ -156,11 +158,14 @@
                         </li>
                     </ul>
                 </div>
+                <!-- 책제목 -->
                 <div class="title">
-                    <p><h2>프리 웨이</h2>
+                    <p>
+                    <h2>프리 웨이</h2>
                     너를 어디든 데려가줄 자유로운 삶의 방식</p>
                     <div class="share"><img src="img/share.png" alt="share"></div>
                 </div>
+                <!-- 책 작가정보 -->
                 <div class="bookBox">
                     <div class="author">
                         <p><span>드로운앤드류 저자(글)</span><br>
@@ -168,7 +173,8 @@
                         </p>
                         <p><strong>주간베스트</strong> 국내도서 <b>89</b>위 · 자기계발 <b>15</b>위 </p>
                         <div class="countBox">
-                               <div class="reviewL">
+                            <a href="#">
+                            <div class="reviewL">
                                 <span>10.0</span>
                                 <p><img src="img/klover.png" alt="별점">
                                     <img src="img/klover.png" alt="별점">
@@ -176,21 +182,32 @@
                                     <img src="img/klover.png" alt="별점">
                                 </p>
                                 <span>(<b>5</b>개의 리뷰)</span>
-                               </div>
-                               <div class="reviewR">
+                            </div>
+                            <div class="reviewR">
                                 <img src="img/quotes.png" alt="quotes">
                                 <p>최고예요</p>
                                 <span>(<b>40%</b>의 구매자)</span>
-                               </div>
+                            </div>
+                        </a>
                         </div>
                     </div>
-                    <div class="bookCover"></div>
+
+                    <!-- 책커버 -->
+                    <div class="bookCover">
+                        <div class="turnBook">
+                            <img src="img/flipBook.jpg" alt="프리웨이">
+                        </div>
+                    </div>
+
+                    <!-- 책 배송정보 -->
                     <div class="bookDeliver">
                         <div class="prod_price">
-                        <span>MD의 선택</span>
-                        <span>무료배송</span>
-                        <span>소득공제</span>
-                        <p><strong>10%</strong> <span>16,200</span>원 <small>18,000원</small></p>
+                            <div class="btnWrap">
+                             <span>MD의 선택</span>
+                            <span>무료배송</span>
+                            <span>소득공제</span>   
+                            </div>
+                            <p><strong>10% </strong> <span> 16,200</span>원 <small>18,000원</small></p>
                         </div>
                         <div class="prod_box">
                             <strong>적립/혜택</strong>
@@ -199,9 +216,15 @@
                         <div class="prod_box">
                             <p><strong>배송안내</strong><span>무료배송</span></p>
                             <p>3/22(금)출고예정</p>
-                            <p>서울시 종로구 종로1 <button>변경</button></p>
+                            <p>서울시 종로구 종로1 <button>변경<img src="img/arw.png" alt="arrow"></button></p>
                         </div>
-                        
+                        <div class="prod_box">
+                            <p>알림 신청하시면 원하시는 정보를 <br>
+                                받아 보실 수 있습니다.</p>
+                            <button><img src="img/alarm.png" alt="alarm"> 알림신청</button>
+                        </div>
+                        <button><img src="img/locate.png" alt="locater"> 매장 재고·위치</button>
+
                     </div>
                 </div>
             </div>
@@ -209,56 +232,76 @@
 
         <!-- 상세페이지 -->
         <div class="bookDetail">
-            <div class="container">
-                <!-- 상세페이지 네비 -->
-                <div class="detailNav"></div>
 
+            <!-- 상세페이지 네비 -->
+            <div class="detailNav">
+                <div class="container">
+                    <ul>
+                        <li><a href="#bookEvent">이벤트</a></li>
+                        <li><a href="#productInfo">상품정보</a></li>
+                        <li><a href="#review">리뷰(5)</a></li>
+                        <li><a href="#refund">교환/반품/품절</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
                 <!-- 상세페이지 왼쪽 -->
                 <div class="leftSide">
-                <!-- 이벤트  -->
-                <div class="bookEvent">
+                    <!-- 이벤트  -->
+                    <div id="bookEvent">
 
-                    <!-- 이 책의 이벤트 -->
-                    <div class="event"></div>
-                    <!-- 북카드 -->
-                    <div class="bookCard"></div>
-                    <!-- 함께 구매한 책 -->
-                    <div class="buyBook"></div>
-                    <!-- 책 상세페이지 -->
-                    <div class="detailBox"></div>
+                        <!-- 이 책의 이벤트 -->
+                        <div class="event">
+                            <p>
+                                <h3>이 책의 이벤트</h3>
+                                <span>* 해외주문/바로드림/제휴사주문/업체배송건의 경우 1+1 증정상품이 발송되지 않습니다.</span>
+                            </p>
+                            <a href="#">
+                                <div class="imgboxE">
+                                    <img src="img/event_sub.png" alt="이 책의 이벤트">
+                                </div>
+                                <p>『프리 웨이』 초판 이벤트</p>
+                                <span>2024/03/13 ~ 2024/04/14</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 상품정보 -->
+                    <div id="productInfo">
 
-                </div>
-                <!-- 상품정보 -->
-                <div class="productInfo">
+                        <!-- 북카드 -->
+                        <div class="bookCard"></div>
+                        <!-- 함께 구매한 책 -->
+                        <div class="buyBook"></div>
+                        <!-- 책 상세페이지 -->
+                        <div class="detailBox"></div>
+                        <!-- 책소개 -->
+                        <div class="bookIntro"></div>
+                        <!-- 북 트레일러 -->
+                        <div class="bookVideo"></div>
+                        <!-- 작가정보 -->
+                        <div class="authorDetail"></div>
+                        <!-- 목차 -->
+                        <div class="contents"></div>
+                        <!-- 추천사 -->
+                        <div class="command"></div>
+                        <!-- 책속으로 -->
+                        <div class="bookIn"></div>
+                        <!-- 출판사 서평 -->
+                        <div class="publisher"></div>
+                        <!-- 기본정보 -->
+                        <div class="info"></div>
 
-                    <!-- 책소개 -->
-                    <div class="bookIntro"></div>
-                    <!-- 북 트레일러 -->
-                    <div class="bookVideo"></div>
-                    <!-- 작가정보 -->
-                    <div class="authorDetail"></div>
-                    <!-- 목차 -->
-                    <div class="contents"></div>
-                    <!-- 추천사 -->
-                    <div class="command"></div>
-                    <!-- 책속으로 -->
-                    <div class="bookIn"></div>
-                    <!-- 출판사 서평 -->
-                    <div class="publisher"></div>
-                    <!-- 기본정보 -->
-                    <div class="info"></div>
+                    </div>
 
-                </div>
+                    <!-- 리뷰 -->
+                    <div id="review">
+                        <div class="klover"></div>
+                        <div class="reviewBox"></div>
+                        <div class="reviewText"></div>
+                    </div>
 
-                <!-- 리뷰 -->
-                <div class="review">
-                    <div class="klover"></div>
-                    <div class="reviewBox"></div>
-                    <div class="reviewText"></div>
-                </div>
-
-                <!-- 교환/반품/품절 -->
-                <div class="refund"></div>
+                    <!-- 교환/반품/품절 -->
+                    <div id="refund"></div>
 
                 </div>
                 <!-- 상세페이지 오른쪽 -->
@@ -353,7 +396,7 @@
                 </div>
             </div>
 
-             <!-- 풋터 회사정보 -->
+            <!-- 풋터 회사정보 -->
             <div class="container">
                 <div class="footerIcon">
                     <div class="footerImg"></div>
@@ -373,7 +416,7 @@
                         </div>
                     </div>
                 </div>
-               
+
                 <div class="detailWrap">
                     <div class="footerDetail">
                         <ul class="footerNav">
