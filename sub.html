@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/sub.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="js/common.js"></script>
-    <script src="js/sub.js"></script>
+
 </head>
 
 <body>
@@ -168,27 +169,27 @@
                 <!-- 책 작가정보 -->
                 <div class="bookBox">
                     <div class="author">
-                        <p><span>드로운앤드류 저자(글)</span><br>
+                        <p><span>드로우앤드류 저자(글)</span><br>
                             <small>웅진지식하우스 · 2024년 03월 22일</small>
                         </p>
                         <p><strong>주간베스트</strong> 국내도서 <b>89</b>위 · 자기계발 <b>15</b>위 </p>
                         <div class="countBox">
                             <a href="#">
-                            <div class="reviewL">
-                                <span>10.0</span>
-                                <p><img src="img/klover.png" alt="별점">
-                                    <img src="img/klover.png" alt="별점">
-                                    <img src="img/klover.png" alt="별점">
-                                    <img src="img/klover.png" alt="별점">
-                                </p>
-                                <span>(<b>5</b>개의 리뷰)</span>
-                            </div>
-                            <div class="reviewR">
-                                <img src="img/quotes.png" alt="quotes">
-                                <p>최고예요</p>
-                                <span>(<b>40%</b>의 구매자)</span>
-                            </div>
-                        </a>
+                                <div class="reviewL">
+                                    <span>10.0</span>
+                                    <p><img src="img/klover.png" alt="별점">
+                                        <img src="img/klover.png" alt="별점">
+                                        <img src="img/klover.png" alt="별점">
+                                        <img src="img/klover.png" alt="별점">
+                                    </p>
+                                    <span>(<b>5</b>개의 리뷰)</span>
+                                </div>
+                                <div class="reviewR">
+                                    <img src="img/quotes.png" alt="quotes">
+                                    <p>최고예요</p>
+                                    <span>(<b>40%</b>의 구매자)</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
@@ -203,9 +204,9 @@
                     <div class="bookDeliver">
                         <div class="prod_price">
                             <div class="btnWrap">
-                             <span>MD의 선택</span>
-                            <span>무료배송</span>
-                            <span>소득공제</span>   
+                                <span>MD의 선택</span>
+                                <span>무료배송</span>
+                                <span>소득공제</span>
                             </div>
                             <p><strong>10% </strong> <span> 16,200</span>원 <small>18,000원</small></p>
                         </div>
@@ -239,7 +240,7 @@
                     <ul>
                         <li><a href="#bookEvent">이벤트</a></li>
                         <li><a href="#productInfo">상품정보</a></li>
-                        <li><a href="#review">리뷰(5)</a></li>
+                        <li><a href="#review">리뷰 (5)</a></li>
                         <li><a href="#refund">교환/반품/품절</a></li>
                     </ul>
                 </div>
@@ -252,16 +253,16 @@
 
                         <!-- 이 책의 이벤트 -->
                         <div class="event">
-                            <p>
+                            <div>
                                 <h3>이 책의 이벤트</h3>
                                 <span>* 해외주문/바로드림/제휴사주문/업체배송건의 경우 1+1 증정상품이 발송되지 않습니다.</span>
-                            </p>
+                            </div>
                             <a href="#">
                                 <div class="imgboxE">
                                     <img src="img/event_sub.png" alt="이 책의 이벤트">
                                 </div>
                                 <p>『프리 웨이』 초판 이벤트</p>
-                                <span>2024/03/13 ~ 2024/04/14</span>
+                                <span> 2024/03/13 ~ 2024/04/14</span>
                             </a>
                         </div>
                     </div>
@@ -269,27 +270,144 @@
                     <div id="productInfo">
 
                         <!-- 북카드 -->
-                        <div class="bookCard"></div>
+                        <div class="bookCard">
+                            <h3>북카드</h3>
+
+                            <div class="swiper book_card">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper book_card_wrap">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide card_slide"><img src="img/bookcard1.jpg" alt="북카드"></div>
+                                    <div class="swiper-slide card_slide"><img src="img/bookcard2.jpg" alt="북카드"></div>
+                                    <div class="swiper-slide card_slide"><img src="img/bookcard3.jpg" alt="북카드"></div>
+                                    <div class="swiper-slide card_slide"><img src="img/bookcard4.jpg" alt="북카드"></div>
+                                    <div class="swiper-slide card_slide"><img src="img/bookcard5.jpg" alt="북카드"></div>
+                                    <div class="swiper-slide card_slide"><img src="img/bookcard6.jpg" alt="북카드"></div>
+                                    <div class="swiper-slide card_slide"><img src="img/bookcard7.jpg" alt="북카드"></div>
+                                    <div class="swiper-slide card_slide"><img src="img/bookcard8.jpg" alt="북카드"></div>
+                                    <div class="swiper-slide card_slide"><img src="img/bookcard9.jpg" alt="북카드"></div>
+                                    <div class="swiper-slide card_slide"><img src="img/bookcard10.jpg" alt="북카드"></div>
+                                </div>
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev prev"></div>
+                                <div class="swiper-button-next next"></div>
+                            </div>
+
+                        </div>
                         <!-- 함께 구매한 책 -->
-                        <div class="buyBook"></div>
+                        <div class="buyBook">
+                            <h3>함께 구매한 책</h3>
+                            <div class="buy_book_box">
+                                <div class="swiper mySwiper buy_book">
+                                    <div class="swiper-wrapper buy_book_wrap">
+                                        <div class="swiper-slide buy_slide"></div>
+                                        <div class="swiper-slide buy_slide"></div>
+                                        <div class="swiper-slide buy_slide"></div>
+                                        <div class="swiper-slide buy_slide"></div>
+                                        <div class="swiper-slide buy_slide"></div>
+                                        <div class="swiper-slide buy_slide"></div>
+                                        <div class="swiper-slide buy_slide"></div>
+                                        <div class="swiper-slide buy_slide"></div>
+                                        <div class="swiper-slide buy_slide"></div>
+                                        <div class="swiper-slide buy_slide"></div>
+                                        <div class="swiper-slide buy_slide"></div>
+                                        <div class="swiper-slide buy_slide"></div>
+                                        <div class="swiper-slide buy_slide"></div>
+                                        <div class="swiper-slide buy_slide"></div>
+                                    </div>
+                                    <div class="swiper-scrollbar"></div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- 책 상세페이지 -->
-                        <div class="detailBox"></div>
+                        <div class="detailBox">
+                            <img src="img/detail.jpg" alt="상세페이지">
+                        </div>
                         <!-- 책소개 -->
-                        <div class="bookIntro"></div>
+                        <div class="bookIntro">
+                            <h3>책 소개</h3>
+                            <p>이 책이 속한 분야</p>
+                            <div>국내도서 <span></span> 자기계발 <span></span> 성공/처세 <span></span> 자기관리/처세 </div>
+                            <div>‘좋아하는 일로 행복하게 일한다.’ 모두가 꿈꾸는 이 한 문장으로 많은 이에게 영감을 주는 자기계발 크리에이터 드로우앤드류가 2년 만에 신간 『프리 웨이』를
+                                출간했다. 전작에서 자신만의 일을 찾기까지의 이야기를 담았다면, 이번 책에서는 안전한 선택 대신 무모한 도전을 거듭하며 자신이 원하는 ‘자유로운 삶’에 도달할
+                                수 있었던 방법을 소개한다. <br>
+                                20대의 대부분을 해외에서 보내며 겪은 다양한 인생 경험을 바탕으로 끊임없이 자신을 업그레이드시키는 방법과 실용적인 인생 조언, 동기부여 콘텐츠를 만들고 있는
+                                드로우앤드류는 ‘MZ 세대의 성장 멘토’라는 수식어에 가장 걸맞은 사람이다. “앤드류 님처럼 살고 싶어요”라고 댓글을 남기며 그의 현실 조언에 귀기울이는
+                                69만 구독자가 이를 뒷받침한다. 수많은 자기계발 크리에이터들 사이에서 특히 MZ 세대가 드로우앤드류에게 주목하는 이유는 무엇일까? <br>
+                                저자는 그 답을 자신의 ‘자유로운 삶’에서 찾았다. 세상이 정해놓은 답이 아니라 마음이 시키는 결정을 하고, 그 선택에 책임을 지는 삶의 방식에 많은 이들이
+                                공감하고 동경하며 응원을 보내고 있다는 것이다. 이 책은 그런 드로우앤드류가 고민과 걱정이 많았을 20대에 안전한 선택 대신 과감한 도전을 택할 수 있었던
+                                ‘자유로운 삶의 방식’이 무엇인지를 여실히 보여준다. 만약 지금 눈앞의 선택과 결정이 두렵다면, 비슷한 갈림길을
+                                거쳐온 드로우앤드류가 어떤 질문을 던지며 나아왔는지 따라가 보자. 원하는 곳 어디든 갈 수 있는 ‘프리 웨이’로 당신을 인도해줄 것이다.</div>
+                        </div>
                         <!-- 북 트레일러 -->
-                        <div class="bookVideo"></div>
+                        <div class="bookVideo">
+                            <h3>북 트레일러</h3>
+                            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/DDpAJ7xIK9s"
+                                title="선택과 결정이 두려운 당신에게 가장 필요한 말들" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                            <ul>
+                                <li>출판사의 사정에 따라 서비스가 변경 또는 중지될 수 있습니다.</li>
+                                <li>Window7의 경우 사운드 연결이 없을 시, 동영상 재생에 오류가 발생할 수 있습니다. 이어폰, 스피커 등이 연결되어 있는지 확인 하시고 재생하시기
+                                    바랍니다.</li>
+                            </ul>
+                        </div>
                         <!-- 작가정보 -->
-                        <div class="authorDetail"></div>
+                        <div class="authorDetail">
+                            <h3>작가정보</h3>
+                            <div class="authorWrap">
+                                <div class="authorName">
+                                    <p>
+                                        <span>저자(글)</span>
+                                        <b>드로우앤드류</b>
+                                    </p>
+                                    <button><span>인물정보</span></button>
+                                </div>
+                                <span>방송인 > 유튜버</span>
+                                <div class="authorText">
+                                    <img src="img/author.png" alt="작가">
+                                    <div class="aTextbox">
+                                        ‘내가 꿈꾸는 나(앤드류)를 그려나간다’라는 뜻을 가진 이름 ‘드로우앤드류’로 활동하는 작가이자 콘텐츠 크리에이터.
+                                        호주 워킹홀리데이를 시작으로 필리핀, 말레이시아, 미국 등 20대의 대부분을 해외에서 보냈으며, 지금까지 쌓아온 다양한 인생 경험을 바탕으로
+                                        지속가능한 자기계발 방법과
+                                        실용적인 인생의 조언을 콘텐츠로 만들고 있다. 첫 번째 유튜브 채널 〈드로우앤드류〉는 ‘좋아하는 일로 행복하게 일한다’라는 문장과 함께 많은
+                                        이들에게 동기부여와 영감을 제공하며 큰 사랑을 받았고,
+                                        두 번째 채널 〈마세슾(My Safe Space)〉에서는 일상을 감각적인 영상으로 기록하는 콘텐츠를 선보이며 단기간에 큰 성장을 이루었다.
+                                        지은 책으로는 『럭키 드로우』 『업 사이클링』이 있으며, 사회 초년생이었던 순간부터 현재에 이르기까지 삶의 여러 단계를
+                                        지나오며 마주했던 도전과 기회의 순간들을 어떻게 활용하여 개인적 성장을 이루었는지 그 경험과 통찰을 전하기 위해 이번 책을 썼다.
+
+                                        ·유튜브 youtube.com/드로우앤드류
+                                        ·인스타그램 @drawandrew / @drawandrew101
+                                    </div>
+                                </div>
+                                <div class="authorBookWrap">
+                                    <div class="authorBook"></div>
+                                    <div class="authorBook"></div>
+
+                                </div>
+
+                            </div>
+                        </div>
                         <!-- 목차 -->
-                        <div class="contents"></div>
+                        <div class="contents">
+                            <h3>목차</h3>
+                        </div>
                         <!-- 추천사 -->
-                        <div class="command"></div>
+                        <div class="command">
+                            <h3>추천사</h3>
+                        </div>
                         <!-- 책속으로 -->
-                        <div class="bookIn"></div>
+                        <div class="bookIn">
+                            <h3>책 속으로</h3>
+                        </div>
                         <!-- 출판사 서평 -->
-                        <div class="publisher"></div>
+                        <div class="publisher">
+                            <h3>출판사 서평</h3>
+                        </div>
                         <!-- 기본정보 -->
-                        <div class="info"></div>
+                        <div class="info">
+                            <h3>기본정보</h3>
+                        </div>
 
                     </div>
 
@@ -307,15 +425,59 @@
                 <!-- 상세페이지 오른쪽 -->
                 <div class="rightSide">
                     <!-- 기분 좋은 발견 -->
-                    <div class="find"></div>
+                    <div class="find">
+                        <div class="Tit">
+                            <h3>기분 좋은 발견</h3>
+                            <span>더보기</span>
+                        </div>
+                        <div class="swiper mySwiper find_good">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide"><img src="img/find1.jpg" alt="배너광고"></div>
+                              <div class="swiper-slide"><img src="img/find2.jpg" alt="배너광고"></div>
+                              <div class="swiper-slide"><img src="img/find3.jpg" alt="배너광고"></div>
+                              <div class="swiper-slide"><img src="img/find4.jpg" alt="배너광고"></div>
+                              <div class="swiper-slide"><img src="img/find5.jpg" alt="배너광고"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                          </div>
+                    </div>
                     <!-- 이 분야의 베스트 -->
-                    <div class="thisBest"></div>
+                    <div class="thisBest">
+                        <div class="Tit">
+                            <h3>이 분야의 베스트</h3>
+                            <span>더보기</span>
+                        </div>
+                        <div class="bestList">
+                            <div class="bestBook number"></div>
+                            <div class="bestBook"></div>
+                            <div class="bestBook"></div>
+                            <div class="bestBook"></div>
+                            <div class="bestBook"></div>
+                        </div>
+                    </div>
                     <!-- 배너 -->
-                    <div class="banner1"></div>
+                    <div class="banner1">
+                        <img src="img/banner_sub.png" alt="배너광고">
+                    </div>
                     <!-- 이 분야의 신간 -->
-                    <div class="thisNew"></div>
+                    <div class="thisNew">
+                        <div class="Tit">
+                            <h3>이 분야의 신간</h3>
+                            <span>더보기</span>
+                        </div>
+                        <div class="newList">
+                            <div class="newBook number"></div>
+                            <div class="newBook"></div>
+                            <div class="newBook"></div>
+                            <div class="newBook"></div>
+                            <div class="newBook"></div>
+                        </div>
+                    </div>
                     <!-- 배너광고 -->
-                    <div class="banner2"></div>
+                    <div class="banner2">
+                        <img src="img/ad1.png" alt="배너광고">
+                        <img src="img/ad2.png" alt="배너광고">
+                    </div>
                 </div>
             </div>
         </div>
@@ -489,8 +651,9 @@
         <div class="priceBox"></div>
 
     </div>
-
-    <script src="js/index_ajax.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/sub.js"></script>
+    <script src="js/sub_ajax.js"></script>
 </body>
 
 </html>
