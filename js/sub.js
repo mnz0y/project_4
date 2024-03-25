@@ -46,3 +46,35 @@ const swiper = new Swiper('.book_card', {
       clickable: true,
     },
   });
+
+  //작가정보
+  $(function(){
+    $('.foldBtn').click(function(){
+      $('.aTextBox').addClass('toggle');
+    });
+  });
+
+  //목차
+  $(function(){
+    $.get('../sub_txt/목차.txt',function(data){
+      $('.contentsText').html(data);
+    });
+  });
+  //추천사
+  $(function(){
+    $.get('../sub_txt/추천사.txt',function(data){
+      $('.commandText').html(data);
+    });
+  });
+  //책속으로
+  $(function(){
+    $.get('../sub_txt/책속으로.txt',function(data){
+      $('.bookInText').html(data);
+    });
+  });
+  //출판사 서평
+  $(function(){
+    $.get('../sub_txt/출판사서평.txt',function(data){
+      $('.publicText').html(data);
+    });
+  });

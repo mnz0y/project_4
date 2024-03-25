@@ -92,7 +92,8 @@
     text-align: center;
     padding: 10px;
     position: relative;
-    h2{
+
+    h2 {
         line-height: 60px;
     }
 
@@ -115,7 +116,7 @@
 }
 
 .bookBox {
-    @include dFlex(100%,flex-start);
+    @include dFlex(100%, flex-start);
     height: 100%;
     margin-top: 50px;
 }
@@ -240,7 +241,8 @@
     width: 50%;
     transform-style: preserve-3d;
     perspective: 1000px;
-    .turnBook{
+
+    .turnBook {
         width: 300px;
         height: 500px;
         margin: 0 auto;
@@ -248,43 +250,47 @@
         transform-style: preserve-3d;
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
         transition: 0.5s;
-        
-        &:hover{
+
+        &:hover {
             transform: rotateY(35deg);
-            cursor: url(../img/flip.svg), pointer ;
+            cursor: url(../img/flip.svg), pointer;
         }
-        &.rotate{
+
+        &.rotate {
             transform: rotateY(180deg);
         }
-        
-        img{
-            box-shadow: 1px 1px 5px #999 ;
+
+        img {
+            box-shadow: 1px 1px 5px #999;
             width: 100%;
             height: 100%;
             position: absolute;
             top: 0;
             left: 0;
-        };
+        }
 
-        &::before{
+        ;
+
+        &::before {
             content: "";
             width: 30px;
             height: 100%;
-            @include backGround(url(../img/flipBook_A.jpg),center);
+            @include backGround(url(../img/flipBook_A.jpg), center);
             position: absolute;
             transform: rotateY(90deg);
             transform-origin: left;
         }
-        &::after{
+
+        &::after {
             content: "";
             width: 100%;
             height: 100%;
             position: absolute;
-            @include backGround(url(../img/flipBook_B.jpg),center);
+            @include backGround(url(../img/flipBook_B.jpg), center);
             transform-origin: center;
             transform: rotateY(180deg) translateZ(30px);
         }
-        
+
     }
 }
 
@@ -293,23 +299,26 @@
 .bookDeliver {
     width: 24%;
     height: 100%;
-    button:hover{
+
+    button:hover {
         background-color: #eee;
     }
-    &>button{
+
+    &>button {
         width: 100%;
         height: 40px;
         padding: 1px 5px;
-                background-color: #fefefe;
-                border: 1px solid #ddd;
-                border-radius: 5px;
-        img{
+        background-color: #fefefe;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+
+        img {
             width: 15px;
             height: 20px;
             vertical-align: sub;
         }
     }
-    
+
 }
 
 .prod_price {
@@ -357,7 +366,7 @@
 
     border-bottom: 1px solid #eee;
     font-size: 14px;
-    
+
 
     &:nth-child(2) {
         @include dFlex();
@@ -409,7 +418,8 @@
                     height: 7px;
                     margin-bottom: 1px;
                 }
-               &:hover{
+
+                &:hover {
                     background-color: #eee;
                 }
             }
@@ -435,12 +445,14 @@
             border: 1px solid $mainColor;
             border-radius: 5px;
             font-size: 12px;
-            img{
+
+            img {
                 width: 12px;
                 height: 18px;
                 vertical-align: sub;
             }
-            &:hover{
+
+            &:hover {
                 background-color: #eee;
             }
         }
@@ -449,92 +461,133 @@
 
 //상세페이지
 //네비
-.detailNav{
+.detailNav {
     width: 100%;
     height: 100px;
     border-bottom: 1px solid #aaa;
-    ul{
-        @include dFlex(100%,center,flex-start);
+
+    ul {
+        @include dFlex(100%, center, flex-start);
         height: 100px;
-        li{
+
+        li {
             width: 150px;
             height: 100%;
-            a{
+
+            a {
                 display: inline-block;
                 height: 100%;
                 padding-top: 40px;
-               font-size: 17px;
-               color: #777;
+                font-size: 17px;
+                color: #777;
             }
         }
     }
 }
-.underline{ border-bottom: 2px solid #333;font-weight: bold;}
+
+.underline {
+    border-bottom: 2px solid #333;
+    font-weight: bold;
+}
 
 //상세페이지 구역나눔
-.bookDetail{
-    h3{font-size: 20px}
-    &>.container{
-        @include dFlex(1260px,flex-start);
-        .leftSide{
+.bookDetail {
+    h3 {
+        font-size: 20px
+    }
+
+    &>.container {
+        @include dFlex(1260px, flex-start);
+
+        .leftSide {
             width: 65%;
         }
-        .rightSide{
+
+        .rightSide {
             width: 30%;
         }
     }
 }
+
 //왼편
 //이책의 이벤트
-.event{
+.event {
     margin: 50px 0;
-    &>div{
+
+    &>div {
         @include dFlex();
         height: 100px;
-        span{
+
+        span {
             font-size: 13px;
             color: #777;
         }
     }
-    a{
+
+    a {
         display: inline-block;
-        
-        img{
+
+        img {
             border-radius: 15px;
         }
-        p{font-weight: 500; margin: 10px 0;}
-        span{font-size: 13px};
+
+        p {
+            font-weight: 500;
+            margin: 10px 0;
+        }
+
+        span {
+            font-size: 13px
+        }
+
+        ;
     }
 }
 
 //북카드
-.bookCard{
+.bookCard {
     height: 550px;
-    h3{margin: 50px 0;}
+
+    h3 {
+        margin: 50px 0;
+    }
+
     position: relative;
 }
+
 .book_card {
     width: 100%;
     height: 380px;
-    .prev{left: 0; display: none;}
-    .next{right: 0; display: none;}
-    
+
+    .prev {
+        left: 0;
+        display: none;
+    }
+
+    .next {
+        right: 0;
+        display: none;
+    }
+
 }
-.card_slide{
+
+.card_slide {
     text-align: center;
     width: 380px;
     height: 380px;
-    img{
+
+    img {
         width: 380px;
         height: 380px;
     }
 }
 
 //함께 구매한 책
-.buyBook{
+.buyBook {
     height: 550px;
 }
-.buy_book_box{
+
+.buy_book_box {
     width: 100%;
     height: 400px;
     background-color: #eee;
@@ -542,46 +595,67 @@
     margin: 50px 0;
     overflow: hidden;
 }
-.buy_book{
+
+.buy_book {
     width: 95%;
     height: 350px;
     top: 25px;
 }
-.buy_slide{
-        text-align: center;
-        padding-top: 20px;
-        h5{
-            margin: 8px 0;
-        }
-        p{font-size: 13px; }
-        b{font-size: 13px;}
+
+.buy_slide {
+    text-align: center;
+    padding-top: 20px;
+
+    h5 {
+        margin: 8px 0;
     }
-.detailBox{
-    img{border-radius: 20px;
-    width: 100%;}
+
+    p {
+        font-size: 13px;
+    }
+
+    b {
+        font-size: 13px;
+    }
 }
-.bookIntro{
-    margin: 50px 0;
-    h3{
-       margin: 20px 0;
+
+.detailBox {
+    img {
+        border-radius: 20px;
+        width: 100%;
     }
-    p{font-weight: 500;}
-    div{
+}
+
+.bookIntro {
+    margin: 50px 0;
+
+    h3 {
         margin: 20px 0;
-        &:nth-of-type(1){
+    }
+
+    p {
+        font-weight: 500;
+    }
+
+    div {
+        margin: 20px 0;
+
+        &:nth-of-type(1) {
             font-size: 14px;
             color: #444;
             height: 70px;
             border-bottom: 1px solid #aaa
         }
-        span{
+
+        span {
             display: inline-block;
             width: 11px;
             height: 11px;
             margin: 0 10px;
-            @include backGround(url(../img/arw.png),center);
+            @include backGround(url(../img/arw.png), center);
         }
-        &:nth-of-type(2){
+
+        &:nth-of-type(2) {
             font-size: 15px;
             line-height: 24px;
             color: #444;
@@ -591,15 +665,19 @@
 }
 
 //북 트레일러
-.bookVideo{
+.bookVideo {
     margin: 50px 0;
 
-    iframe{
+    iframe {
         border-radius: 20px;
         margin-top: 30px;
     }
-    ul{padding-left: 15px;}
-    li{
+
+    ul {
+        padding-left: 15px;
+    }
+
+    li {
         list-style: disc;
         color: #777;
         font-size: 13px;
@@ -608,131 +686,549 @@
 }
 
 //작가정보
-.authorDetail{
+.authorDetail {
     margin: 50px 0;
 }
-.authorWrap{
+
+.authorWrap {
     width: 100%;
     background-color: #eee;
     border-radius: 20px;
     margin: 30px 0;
     padding: 30px;
-    &>span{
+
+    &>span {
         display: inline-block;
         background-color: #fefefe;
         padding: 10px 20px;
         border-radius: 20px;
         font-size: 14px;
-        color : #777;
+        color: #777;
         margin: 20px 10px;
     }
 }
-.authorName{
+
+.authorName {
     @include dFlex();
     height: 50px;
-    p{
+
+    p {
         font-size: 17px;
-        span{
+
+        span {
             color: #777;
         }
-        b{letter-spacing: 2px;}
+
+        b {
+            letter-spacing: 2px;
+        }
     }
-    button{
+
+    button {
         padding: 3px 10px;
         background-color: #fefefe;
         border: 1px solid #999;
         border-radius: 5px;
-        &:hover{
+
+        &:hover {
             background-color: #eee;
         }
-        span{
-            &::before{
+
+        span {
+            &::before {
                 content: "";
                 display: inline-block;
                 width: 15px;
                 height: 15px;
+
                 margin : {
                     right: 5px;
                     bottom: -2px
-                };
-                @include backGround(url(../img/info.png),center)
+                }
 
+                ;
+                @include backGround(url(../img/info.png), center)
             }
         }
     }
 }
 
-.authorText{
-    @include dFlex(100%,flex-start);
-    img{
+.authorText {
+    @include dFlex(100%, flex-start);
+
+    img {
         border-radius: 50%;
         display: inline-block;
         width: 100px;
         height: 100px;
         margin-left: 10px;
     }
-    .aTextbox{width: 80%;}
+
+    .aTextbox {
+        width: 80%;
+        padding: 10px;
+        color: #555;
+        font-size: 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 50px;
+    }
 }
-.authorBookWrap{
-    @include dFlex($jc:flex-start);
+
+.toggle {
+    height: 350px;
+}
+
+.foldBtn1 {
+    width: 10%;
+    margin-left: 160px;
+    cursor: pointer;
+}
+
+.toText {
+    color: #555;
+    font-size: 15px;
+    margin-right: 5px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.arrowDown {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    @include backGround(url(../img/more.png), center);
+    vertical-align: middle;
+}
+
+.arrowUp {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    @include backGround(url(../img/morex.png), center);
+    vertical-align: middle;
+}
+
+.authorBookWrap {
+    @include dFlex($jc: flex-start);
     margin: 20px 0;
-    .authorBook{
+
+    .authorBook {
         margin: 0 10px;
-        h5{
+
+        h5 {
             margin-top: 10px;
         }
     }
 }
 
 //목차
-.contents{
+.contents {
     margin: 50px 0;
     border-bottom: 1px solid #aaa;
+
+    pre {
+        font-size: 14px;
+        color: #555;
+    }
+
+    h3 {
+        margin-bottom: 50px;
+    }
 }
+
+.foldBtn2 {
+    cursor: pointer;
+    margin: 30px 0;
+}
+
 //추천사
-.command{
+.command {
     margin: 50px 0;
     border-bottom: 1px solid #aaa;
+
+    p {
+        font-size: 15px;
+        color: #555;
+    }
+
+    h3 {
+        margin-bottom: 50px;
+    }
+
+    h4 {
+        color: $mainColor;
+    }
 }
+
 //책속으로
-.bookIn{
+.bookIn {
     margin: 50px 0;
     border-bottom: 1px solid #aaa;
+
+    p {
+        font-size: 15px;
+        color: #555;
+    }
+
+    h3 {
+        margin-bottom: 50px;
+    }
 }
+
 //출판사 서평
-.publisher{
+.publisher {
     margin: 50px 0;
     border-bottom: 1px solid #aaa;
+
+    p {
+        font-size: 15px;
+        color: #555;
+    }
+
+    h3 {
+        margin-bottom: 50px;
+    }
 }
-//기본서평
-.info{
+
+//기본정보
+.info {
     margin: 50px 0;
     border-bottom: 1px solid #aaa;
+
+    h3 {
+        padding-bottom: 30px;
+        border-bottom: 1px solid #555;
+    }
+
+    table {
+        margin: 30px 0;
+        width: 100%;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    th {
+        padding: 10px 20px;
+        width: 30%;
+    }
+
+    td {
+        color: #555;
+    }
 }
+
+//리뷰
+.klover {
+    @include dFlex();
+
+    small {
+        font-size: 13px;
+        color: #555;
+        margin-right: 15px;
+    }
+
+    button {
+        width: 110px;
+        padding: 10px;
+        background-color: $mainColor;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+
+        &:hover {
+            background-color: #2c2f64;
+        }
+
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            width: 15px;
+            height: 18px;
+            margin-right: 5px;
+            @include backGround(url(../img/review.png), center)
+        }
+
+        ;
+    }
+}
+
+//리뷰박스
+.reviewBox {
+    @include dFlex();
+    background-color: #f2f2f2;
+    margin: 20px 0;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    padding: 30px;
+    height: 280px;
+}
+
+//리뷰박스 왼쪽
+.reviewLeft {
+    width: 45%;
+
+    p {
+        text-align: center;
+
+        img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+
+            margin : {
+                right: 5px;
+                bottom: 5px;
+            }
+        }
+
+        b {
+            color: $green;
+            font-size: 20px;
+        }
+
+        small {
+            color: #555;
+        }
+    }
+
+    .kloverPercent {
+        @include dFlex();
+        height: 30px;
+
+        &:nth-child(2) {
+            margin-top: 10px;
+            .progress{background-color: $green;}
+        }
+
+        &:nth-child(3) {
+            img {
+                &:last-child {
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        &:nth-child(4) {
+            img {
+
+                &:last-child,
+                &:nth-child(3) {
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        &:nth-child(5) {
+            img {
+                &:not(:first-child) {
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        span {
+            width: 22%;
+        }
+
+        .progress {
+            width: 60%;
+            height: 8px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        small {
+            width: 15%;
+            text-align: center;
+            color: #555;
+        }
+
+        img {
+            width: 15px;
+            height: 15px;
+            margin-right: 3px;
+        }
+    }
+}
+
+//리뷰박스 오른쪽
+.reviewRight {
+    width: 45%;
+    &::before{
+        content: "";
+        width: 1px;
+        height: 185px;
+        background-color: rgba(0, 0, 0, 0.1);
+        display: inline-block;
+        position: absolute;
+        left: 34%;
+    }
+
+    p {
+        text-align: center;
+
+        img {
+            width: 18px;
+            height: 18px;
+            vertical-align: baseline;
+            margin-right: 5px
+        }
+
+        b {
+            color: $mainColor;
+        }
+    }
+}
+
+.replyListWrap {
+    @include dFlex();
+    height: 137px;
+    .replyNum{font-size: 12px;}
+    .numtt{
+        background-color: #7175BE;
+         color: #fff;
+         border-radius: 20px;
+         width: 40px;
+         margin: 0 auto;
+         padding-bottom: 2px;
+         position: relative;
+         &::after{
+            content: "";
+            width: 10px;
+            height: 5px;
+            @include backGround(url(../img/score.png),center);
+            display: inline-block;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+         }
+        }
+    .contxt{color: $mainColor; font-weight: 500;}
+    .replyList {
+        width: 18%;
+        text-align: center;
+        font-size: 13px;
+        margin-top: 15px;
+        &:nth-child(2){
+            .meter{
+                height: 17px;
+            }
+        }
+        &:nth-child(3){
+            .meter{
+                height: 17px;
+            }
+        }
+        &:nth-child(4){
+            .percentBar{
+                background-color: rgba(170, 173, 224, 0.575);
+            }
+            .meter{
+                height: 33px;
+                background-color: $mainColor;
+            }
+        }
+        &:nth-child(5){
+            .percentBar{
+                background-color: rgba(170, 173, 224, 0.575);
+            }
+            .meter{
+                height: 33px;
+                background-color: $mainColor;
+            }
+        }
+    }
+}
+
+.replyPercent {
+    width: 7px;
+    height: 65px;
+    margin: 10px auto;
+    position: relative;
+
+    .percentBar {
+        position: absolute;
+        width: 7px;
+        height: 65px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .meter {
+        position: absolute;
+        width: 7px;
+        border-radius: 5px;
+        bottom: 0;
+        background-color: #999;
+    }
+
+}
+//리뷰 텍스트박스
+.reviewText{
+    width: 100%;
+    margin: 50px 0;
+}
+.reviewTab{
+    @include dFlex();
+    border-bottom: 1px solid #aaa;
+    height: 40px;
+    .reviewNav{
+        @include dFlex(20%,center,flex-start);
+        li{
+            width: 50%;
+            height: 40px;
+            a{
+                display: inline-block;
+                height: 100%;
+            }
+        }
+    }
+}
+.reviewfont{border-bottom: 2px solid #555; font-weight: bold;}
+#rank{
+    width: 15%;
+    height: 35px;
+}
+
 
 
 //오른편
 //기분좋은발견
-.find{
+.find {
     margin: 50px 0;
 }
-.Tit{
+
+.Tit {
     height: 100px;
     @include dFlex();
-    span{
+
+    span {
         font-size: 14px;
-        &::after{
+
+        &::after {
             @include plus;
         }
-        &:hover{text-decoration: underline;cursor: pointer;}
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
     }
 }
-.find_good{
+
+.find_good {
     width: 100%;
     height: 180px;
-    .swiper-slide{
+
+    .swiper-slide {
         padding: 10px;
-        img{
+
+        img {
             width: 93%;
             height: 100%;
             border-radius: 20px;
@@ -742,57 +1238,68 @@
 }
 
 //이 분야의 베스트
-.bestBook{
-    @include dFlex($jc:flex-start);
+.bestBook {
+    @include dFlex($jc: flex-start);
     margin: 20px 0;
-    img{
+
+    img {
         border: 1px solid #ddd;
         height: 140px;
     }
 }
-.number{
-    .bestTxt{
-        span{
-            &:nth-child(1){
+
+.number {
+    .bestTxt {
+        span {
+            &:nth-child(1) {
                 background-color: $green;
             }
         }
     }
 }
-.bestTxt{
+
+.bestTxt {
     margin-left: 15px;
     width: 50%;
     height: 130px;
-    h5{margin: 8px 0;}
-    span{
+
+    h5 {
+        margin: 8px 0;
+    }
+
+    span {
         font-size: 13px;
         display: inline-block;
-        &:nth-child(1){
+
+        &:nth-child(1) {
             background-color: #444;
-        color: #fff;
-        width: 23px;
-        height: 23px;
-        font-weight: bold;
-        padding-top: 1px;
-        text-align: center;
-        border-radius: 7px 0 7px 0;
+            color: #fff;
+            width: 23px;
+            height: 23px;
+            font-weight: bold;
+            padding-top: 1px;
+            text-align: center;
+            border-radius: 7px 0 7px 0;
         }
-        &:nth-child(4){
+
+        &:nth-child(4) {
             color: $green;
             font-weight: bold;
             margin-right: 10px;
         }
     }
-    p{
+
+    p {
         font-size: 14px;
     }
-    
+
 }
 
 //배너
-.banner1{
+.banner1 {
     margin: 50px 0;
-    img{
+
+    img {
         width: 100%;
         height: 200px;
         border-radius: 20px;
@@ -800,50 +1307,62 @@
 }
 
 //이 분야의 신간
-.newBook{
-    @include dFlex($jc:flex-start);
+.newBook {
+    @include dFlex($jc: flex-start);
     margin: 20px 0;
-    img{
+
+    img {
         border: 1px solid #ddd;
         height: 140px;
     }
 }
-.number{
-    .newTxt{
-        span{
-            &:nth-child(1){
+
+.number {
+    .newTxt {
+        span {
+            &:nth-child(1) {
                 background-color: $green;
             }
         }
     }
 }
-.newTxt{
+
+.newTxt {
     margin-left: 15px;
     width: 50%;
     height: 100px;
-    h5{margin: 8px 0;}
-    span{
+
+    h5 {
+        margin: 8px 0;
+    }
+
+    span {
         font-size: 13px;
         display: inline-block;
-        &:nth-child(3){
+
+        &:nth-child(3) {
             color: $green;
             font-weight: bold;
             margin-right: 10px;
         }
     }
-    p{
+
+    p {
         font-size: 14px;
     }
-    
+
 }
 
 //배너광고
-.banner2{
+.banner2 {
     margin: 50px 0;
-    img{
+
+    img {
         width: 100%;
         height: 180px;
         border-radius: 20px;
         margin: 10px 0;
     }
 }
+
+

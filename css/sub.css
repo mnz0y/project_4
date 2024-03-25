@@ -676,6 +676,53 @@
 }
 .authorText .aTextbox {
   width: 80%;
+  padding: 10px;
+  color: #555;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 50px;
+}
+
+.toggle {
+  height: 350px;
+}
+
+.foldBtn1 {
+  width: 10%;
+  margin-left: 160px;
+  cursor: pointer;
+}
+
+.toText {
+  color: #555;
+  font-size: 15px;
+  margin-right: 5px;
+}
+.toText:hover {
+  text-decoration: underline;
+}
+
+.arrowDown {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-image: url(../img/more.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+}
+
+.arrowUp {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-image: url(../img/morex.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle;
 }
 
 .authorBookWrap {
@@ -697,25 +744,342 @@
   margin: 50px 0;
   border-bottom: 1px solid #aaa;
 }
+.contents pre {
+  font-size: 14px;
+  color: #555;
+}
+.contents h3 {
+  margin-bottom: 50px;
+}
+
+.foldBtn2 {
+  cursor: pointer;
+  margin: 30px 0;
+}
 
 .command {
   margin: 50px 0;
   border-bottom: 1px solid #aaa;
+}
+.command p {
+  font-size: 15px;
+  color: #555;
+}
+.command h3 {
+  margin-bottom: 50px;
+}
+.command h4 {
+  color: #5055b1;
 }
 
 .bookIn {
   margin: 50px 0;
   border-bottom: 1px solid #aaa;
 }
+.bookIn p {
+  font-size: 15px;
+  color: #555;
+}
+.bookIn h3 {
+  margin-bottom: 50px;
+}
 
 .publisher {
   margin: 50px 0;
   border-bottom: 1px solid #aaa;
 }
+.publisher p {
+  font-size: 15px;
+  color: #555;
+}
+.publisher h3 {
+  margin-bottom: 50px;
+}
 
 .info {
   margin: 50px 0;
   border-bottom: 1px solid #aaa;
+}
+.info h3 {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #555;
+}
+.info table {
+  margin: 30px 0;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+}
+.info th {
+  padding: 10px 20px;
+  width: 30%;
+}
+.info td {
+  color: #555;
+}
+
+.klover {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.klover small {
+  font-size: 13px;
+  color: #555;
+  margin-right: 15px;
+}
+.klover button {
+  width: 110px;
+  padding: 10px;
+  background-color: #5055b1;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+.klover button:hover {
+  background-color: #2c2f64;
+}
+.klover button span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 18px;
+  margin-right: 5px;
+  background-image: url(../img/review.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.reviewBox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  margin: 20px 0;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  padding: 30px;
+  height: 280px;
+}
+
+.reviewLeft {
+  width: 45%;
+}
+.reviewLeft p {
+  text-align: center;
+}
+.reviewLeft p img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.reviewLeft p b {
+  color: #6DB329;
+  font-size: 20px;
+}
+.reviewLeft p small {
+  color: #555;
+}
+.reviewLeft .kloverPercent {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+}
+.reviewLeft .kloverPercent:nth-child(2) {
+  margin-top: 10px;
+}
+.reviewLeft .kloverPercent:nth-child(2) .progress {
+  background-color: #6DB329;
+}
+.reviewLeft .kloverPercent:nth-child(3) img:last-child {
+  opacity: 0.5;
+}
+.reviewLeft .kloverPercent:nth-child(4) img:last-child, .reviewLeft .kloverPercent:nth-child(4) img:nth-child(3) {
+  opacity: 0.5;
+}
+.reviewLeft .kloverPercent:nth-child(5) img:not(:first-child) {
+  opacity: 0.5;
+}
+.reviewLeft .kloverPercent span {
+  width: 22%;
+}
+.reviewLeft .kloverPercent .progress {
+  width: 60%;
+  height: 8px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.reviewLeft .kloverPercent small {
+  width: 15%;
+  text-align: center;
+  color: #555;
+}
+.reviewLeft .kloverPercent img {
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+}
+
+.reviewRight {
+  width: 45%;
+}
+.reviewRight::before {
+  content: "";
+  width: 1px;
+  height: 185px;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  position: absolute;
+  left: 34%;
+}
+.reviewRight p {
+  text-align: center;
+}
+.reviewRight p img {
+  width: 18px;
+  height: 18px;
+  vertical-align: baseline;
+  margin-right: 5px;
+}
+.reviewRight p b {
+  color: #5055b1;
+}
+
+.replyListWrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 137px;
+}
+.replyListWrap .replyNum {
+  font-size: 12px;
+}
+.replyListWrap .numtt {
+  background-color: #7175BE;
+  color: #fff;
+  border-radius: 20px;
+  width: 40px;
+  margin: 0 auto;
+  padding-bottom: 2px;
+  position: relative;
+}
+.replyListWrap .numtt::after {
+  content: "";
+  width: 10px;
+  height: 5px;
+  background-image: url(../img/score.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.replyListWrap .contxt {
+  color: #5055b1;
+  font-weight: 500;
+}
+.replyListWrap .replyList {
+  width: 18%;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 15px;
+}
+.replyListWrap .replyList:nth-child(2) .meter {
+  height: 17px;
+}
+.replyListWrap .replyList:nth-child(3) .meter {
+  height: 17px;
+}
+.replyListWrap .replyList:nth-child(4) .percentBar {
+  background-color: rgba(170, 173, 224, 0.575);
+}
+.replyListWrap .replyList:nth-child(4) .meter {
+  height: 33px;
+  background-color: #5055b1;
+}
+.replyListWrap .replyList:nth-child(5) .percentBar {
+  background-color: rgba(170, 173, 224, 0.575);
+}
+.replyListWrap .replyList:nth-child(5) .meter {
+  height: 33px;
+  background-color: #5055b1;
+}
+
+.replyPercent {
+  width: 7px;
+  height: 65px;
+  margin: 10px auto;
+  position: relative;
+}
+.replyPercent .percentBar {
+  position: absolute;
+  width: 7px;
+  height: 65px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.replyPercent .meter {
+  position: absolute;
+  width: 7px;
+  border-radius: 5px;
+  bottom: 0;
+  background-color: #999;
+}
+
+.reviewText {
+  width: 100%;
+  margin: 50px 0;
+}
+
+.reviewTab {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #aaa;
+  height: 40px;
+}
+.reviewTab .reviewNav {
+  display: flex;
+  flex-wrap: wrap;
+  width: 20%;
+  align-items: center;
+  justify-content: flex-start;
+}
+.reviewTab .reviewNav li {
+  width: 50%;
+  height: 40px;
+}
+.reviewTab .reviewNav li a {
+  display: inline-block;
+  height: 100%;
+}
+
+.reviewfont {
+  border-bottom: 2px solid #555;
+  font-weight: bold;
+}
+
+#rank {
+  width: 15%;
+  height: 35px;
 }
 
 .find {
