@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>교보문고</title>
+    <title>교보문고_sub</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
             </div>
             <div class="container">
                 <div class="searchTop">
-                    <div class="logo"></div>
+                    <div class="logo"><a href="index.html"></a></div>
                     <div class="search">
                         <select name="검색" id="searchBox">
                             <option value="통합검색">통합검색</option>
@@ -161,9 +161,9 @@
                 </div>
                 <!-- 책제목 -->
                 <div class="title">
-                    <p>
+                    <div>
                     <h2>프리 웨이</h2>
-                    너를 어디든 데려가줄 자유로운 삶의 방식</p>
+                    너를 어디든 데려가줄 자유로운 삶의 방식</div>
                     <div class="share"><img src="img/share.png" alt="share"></div>
                 </div>
                 <!-- 책 작가정보 -->
@@ -237,10 +237,10 @@
             <!-- 상세페이지 네비 -->
             <div class="detailNav">
                 <div class="container">
-                    <ul>
+                    <ul class="detailNavTab" >
                         <li><a href="#bookEvent">이벤트</a></li>
                         <li><a href="#productInfo">상품정보</a></li>
-                        <li><a href="#review">리뷰 (5)</a></li>
+                        <li><a href="#review">리뷰 (9)</a></li>
                         <li><a href="#refund">교환/반품/품절</a></li>
                     </ul>
                 </div>
@@ -342,8 +342,8 @@
                         <!-- 북 트레일러 -->
                         <div class="bookVideo">
                             <h3>북 트레일러</h3>
-                            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/DDpAJ7xIK9s"
-                                title="선택과 결정이 두려운 당신에게 가장 필요한 말들" frameborder="0"
+                            <iframe src="https://www.youtube.com/embed/DDpAJ7xIK9s"
+                                title="선택과 결정이 두려운 당신에게 가장 필요한 말들"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                             <ul>
@@ -372,14 +372,15 @@
                                         지속가능한 자기계발 방법과
                                         실용적인 인생의 조언을 콘텐츠로 만들고 있다. 첫 번째 유튜브 채널 〈드로우앤드류〉는 ‘좋아하는 일로 행복하게 일한다’라는 문장과 함께 많은
                                         이들에게 동기부여와 영감을 제공하며 큰 사랑을 받았고,
-                                        두 번째 채널 〈마세슾(My Safe Space)〉에서는 일상을 감각적인 영상으로 기록하는 콘텐츠를 선보이며 단기간에 큰 성장을 이루었다. <br>
+                                        두 번째 채널 〈마세슾(My Safe Space)〉에서는 일상을 감각적인 영상으로 기록하는 콘텐츠를 선보이며 단기간에 큰 성장을 이루었다.
+                                        <br>
                                         지은 책으로는 『럭키 드로우』 『업 사이클링』이 있으며, 사회 초년생이었던 순간부터 현재에 이르기까지 삶의 여러 단계를
                                         지나오며 마주했던 도전과 기회의 순간들을 어떻게 활용하여 개인적 성장을 이루었는지 그 경험과 통찰을 전하기 위해 이번 책을 썼다.
                                         <br><br>
                                         ·유튜브 youtube.com/드로우앤드류 <br>
                                         ·인스타그램 @drawandrew / @drawandrew101
                                     </div>
-                                    <div class="foldBtn1">
+                                    <div class="foldBtn1 show">
                                         <span class="toText">펼치기</span><span class="arrowDown"></span>
                                     </div>
                                 </div>
@@ -396,7 +397,7 @@
                         </div>
                         <!-- 추천사 -->
                         <div class="command">
-                            
+
                             <div class="commandText"></div>
                         </div>
                         <!-- 책속으로 -->
@@ -439,7 +440,7 @@
                     <!-- 리뷰 -->
                     <div id="review">
                         <div class="klover">
-                            <h3>Klover 리뷰 (5)</h3>
+                            <h3>Klover 리뷰 (9)</h3>
                             <p>
                                 <small>* 구매 후 리뷰 작성 시, e교환권 100원 적립</small>
                                 <button><span></span>리뷰 작성</button>
@@ -448,34 +449,40 @@
                         <div class="reviewBox">
                             <div class="reviewLeft">
                                 <p><strong>사용자 총점</strong><br>
-                                <span><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"></span>
+                                    <span><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"><img
+                                            src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"></span>
                                     <b>10</b><small> / 10</small>
                                 </p>
                                 <div class="kloverPercent">
-                                    <span><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"></span>
+                                    <span><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"><img
+                                            src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"></span>
                                     <div class="progress"></div>
                                     <small>100%</small>
                                 </div>
                                 <div class="kloverPercent">
-                                    <span><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"></span>
+                                    <span><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"><img
+                                            src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"></span>
                                     <div class="progress"></div>
                                     <small>0%</small>
                                 </div>
                                 <div class="kloverPercent">
-                                    <span><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"></span>
+                                    <span><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"><img
+                                            src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"></span>
                                     <div class="progress"></div>
                                     <small>0%</small>
                                 </div>
                                 <div class="kloverPercent">
-                                    <span><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"></span>
+                                    <span><img src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"><img
+                                            src="img/klover.png" alt="클로버"><img src="img/klover.png" alt="클로버"></span>
                                     <div class="progress"></div>
                                     <small>0%</small>
                                 </div>
                             </div>
                             <div class="reviewRight">
                                 <p>33%의 구매자가<br>
-                                <img src="img/quotes.png" alt="quotes">
-                                <b> 최고예요 </b>라고 응답했어요</p>
+                                    <img src="img/quotes.png" alt="quotes">
+                                    <b> 최고예요 </b>라고 응답했어요
+                                </p>
                                 <div class="replyListWrap">
                                     <div class="replyList">
                                         <div class="replyNum">0%</div>
@@ -521,6 +528,7 @@
                             </div>
                         </div>
                         <div class="reviewText">
+
                             <div class="reviewTab">
                                 <ul class="reviewNav">
                                     <li><a href="#" class="reviewfont">전체 리뷰</a></li>
@@ -531,40 +539,414 @@
                                     <option value="좋아요">최신순</option>
                                 </select>
                             </div>
-                            <div class="reviewTotal">
-                                <div class="reviewBoxTop">
-                                    <ul class="user">
-                                        <li><span>종이책</span></li>
-                                        <li><span>구매자</span></li>
-                                        <li>mo*******</li>
-                                        <li>|</li>
-                                        <li>2024.03.23</li>
-                                        <li>|</li>
-                                        <li>신고/차단</li>
-                                    </ul>
-                                    <div class="reviewBoxImg">
-                                        <span class="kloverImgBox"></span>
-                                        <span>쉬웠어요</span>
+
+                            <div class="totalWrap">
+                                <div class="reviewTotal">
+                                    <div class="reviewBoxTop">
+                                        <ul class="user">
+                                            <li><span>종이책</span></li>
+                                            <li><span>구매자</span></li>
+                                            <li>mo*******</li>
+                                            <li>|</li>
+                                            <li>2024.03.23</li>
+                                            <li>|</li>
+                                            <li>신고/차단</li>
+                                        </ul>
+                                        <div class="reviewBoxImg">
+                                            <span class="kloverImgBox"><img src="img/klover.png" alt="클로버"><img
+                                                    src="img/klover.png" alt="클로버"><img src="img/klover.png"
+                                                    alt="클로버"><img src="img/klover.png" alt="클로버"></span>
+                                            <span>/</span>
+                                            <span>쉬웠어요</span>
+                                        </div>
+                                    </div>
+                                    <div class="reviewBoxconment">
+                                        잘 읽히고 이해가 쉬워요.
+                                    </div>
+                                    <div class="reviewBoxEmoji">
+                                        <span>0</span>
+                                        <span>답글 0</span>
                                     </div>
                                 </div>
-                                <div class="reviewBoxconment">
-                                    잘 읽히고 이해가 쉬워요.
+                                <div class="reviewTotal">
+                                    <div class="reviewBoxTop">
+                                        <ul class="user">
+                                            <li><span>종이책</span></li>
+                                            <li>ya******</li>
+                                            <li>|</li>
+                                            <li>2024.03.12</li>
+                                            <li>|</li>
+                                            <li>신고/차단</li>
+                                        </ul>
+                                        <div class="reviewBoxImg">
+                                            <span class="kloverImgBox"><img src="img/klover.png" alt="클로버"><img
+                                                    src="img/klover.png" alt="클로버"><img src="img/klover.png"
+                                                    alt="클로버"><img src="img/klover.png" alt="클로버"></span>
+                                            <span>/</span>
+                                            <span>추천해요</span>
+                                        </div>
+                                    </div>
+                                    <div class="reviewBoxconment">
+                                        전에 나왔던 책들도 모두 읽었는데 신간도 너무 기대됩니다!!👍🏻👍🏻
+                                    </div>
+                                    <div class="reviewBoxEmoji">
+                                        <span>0</span>
+                                        <span>답글 0</span>
+                                    </div>
                                 </div>
-                                <div class="reviewBoxEmoji">
-                                    <span>0</span>
-                                    <span>답글 0</span>
+                                <div class="reviewTotal">
+                                    <div class="reviewBoxTop">
+                                        <ul class="user">
+                                            <li><span>종이책</span></li>
+                                            <li>go*****</li>
+                                            <li>|</li>
+                                            <li>2024.03.12</li>
+                                            <li>|</li>
+                                            <li>신고/차단</li>
+                                        </ul>
+                                        <div class="reviewBoxImg">
+                                            <span class="kloverImgBox"><img src="img/klover.png" alt="클로버"><img
+                                                    src="img/klover.png" alt="클로버"><img src="img/klover.png"
+                                                    alt="클로버"><img src="img/klover.png" alt="클로버"></span>
+                                            <span>/</span>
+                                            <span>최고예요</span>
+                                        </div>
+                                    </div>
+                                    <div class="reviewBoxconment">
+                                        오 ~ 앤드류신작 ~! <br>
+                                        밝고 희망찬 메시지 기대해요 !!
+                                    </div>
+                                    <div class="reviewBoxEmoji">
+                                        <span>0</span>
+                                        <span>답글 0</span>
+                                    </div>
                                 </div>
-
-
+                                <div class="reviewTotal">
+                                    <div class="reviewBoxTop">
+                                        <ul class="user">
+                                            <li><span>종이책</span></li>
+                                            <li>wj****</li>
+                                            <li>|</li>
+                                            <li>2024.03.12</li>
+                                            <li>|</li>
+                                            <li>신고/차단</li>
+                                        </ul>
+                                        <div class="reviewBoxImg">
+                                            <span class="kloverImgBox"><img src="img/klover.png" alt="클로버"><img
+                                                    src="img/klover.png" alt="클로버"><img src="img/klover.png"
+                                                    alt="클로버"><img src="img/klover.png" alt="클로버"></span>
+                                            <span>/</span>
+                                            <span>최고예요</span>
+                                        </div>
+                                    </div>
+                                    <div class="reviewBoxconment">
+                                        너무 기대되는 책이네요!!!
+                                    </div>
+                                    <div class="reviewBoxEmoji">
+                                        <span>0</span>
+                                        <span>답글 0</span>
+                                    </div>
+                                </div>
+                                <div class="reviewTotal">
+                                    <div class="reviewBoxTop">
+                                        <ul class="user">
+                                            <li><span>종이책</span></li>
+                                            <li>bl*****</li>
+                                            <li>|</li>
+                                            <li>2024.03.12</li>
+                                            <li>|</li>
+                                            <li>신고/차단</li>
+                                        </ul>
+                                        <div class="reviewBoxImg">
+                                            <span class="kloverImgBox"><img src="img/klover.png" alt="클로버"><img
+                                                    src="img/klover.png" alt="클로버"><img src="img/klover.png"
+                                                    alt="클로버"><img src="img/klover.png" alt="클로버"></span>
+                                            <span>/</span>
+                                            <span>도움돼요</span>
+                                        </div>
+                                    </div>
+                                    <div class="reviewBoxconment">
+                                        요즘 제가 제일 고민하고 있던 이야기네요......기대됩니다.
+                                    </div>
+                                    <div class="reviewBoxEmoji">
+                                        <span>0</span>
+                                        <span>답글 0</span>
+                                    </div>
+                                </div>
+                                <div class="reviewTotal">
+                                    <div class="reviewBoxTop">
+                                        <ul class="user">
+                                            <li><span>종이책</span></li>
+                                            <li>be********</li>
+                                            <li>|</li>
+                                            <li>2024.03.12</li>
+                                            <li>|</li>
+                                            <li>신고/차단</li>
+                                        </ul>
+                                        <div class="reviewBoxImg">
+                                            <span class="kloverImgBox"><img src="img/klover.png" alt="클로버"><img
+                                                    src="img/klover.png" alt="클로버"><img src="img/klover.png"
+                                                    alt="클로버"><img src="img/klover.png" alt="클로버"></span>
+                                            <span>/</span>
+                                            <span>추천해요</span>
+                                        </div>
+                                    </div>
+                                    <div class="reviewBoxconment">
+                                        표지가 드로우앤드류님 만큼 상큼하네요!! <br>
+                                        저도 자유롭고 싶어요!!!
+                                    </div>
+                                    <div class="reviewBoxEmoji">
+                                        <span>0</span>
+                                        <span>답글 0</span>
+                                    </div>
+                                </div>
                             </div>
-                            
+
+                            <!-- 히든리뷰 -->
+                            <div class="totalWrap totalhide">
+                                <div class="reviewTotal">
+                                    <div class="reviewBoxTop">
+                                        <ul class="user">
+                                            <li><span>종이책</span></li>
+                                            <li><span>구매자</span></li>
+                                            <li>mo*******</li>
+                                            <li>|</li>
+                                            <li>2024.03.23</li>
+                                            <li>|</li>
+                                            <li>신고/차단</li>
+                                        </ul>
+                                        <div class="reviewBoxImg">
+                                            <span class="kloverImgBox"><img src="img/klover.png" alt="클로버"><img
+                                                    src="img/klover.png" alt="클로버"><img src="img/klover.png"
+                                                    alt="클로버"><img src="img/klover.png" alt="클로버"></span>
+                                            <span>/</span>
+                                            <span>쉬웠어요</span>
+                                        </div>
+                                    </div>
+                                    <div class="reviewBoxconment">
+                                        잘 읽히고 이해가 쉬워요.
+                                    </div>
+                                    <div class="reviewBoxEmoji">
+                                        <span>0</span>
+                                        <span>답글 0</span>
+                                    </div>
+                                </div>
+                                <div class="reviewTotal">
+                                    <div class="reviewBoxTop">
+                                        <ul class="user">
+                                            <li><span>종이책</span></li>
+                                            <li><span>구매자</span></li>
+                                            <li>su******</li>
+                                            <li>|</li>
+                                            <li>2024.03.22</li>
+                                            <li>|</li>
+                                            <li>신고/차단</li>
+                                        </ul>
+                                        <div class="reviewBoxImg">
+                                            <span class="kloverImgBox"><img src="img/klover.png" alt="클로버"><img
+                                                    src="img/klover.png" alt="클로버"><img src="img/klover.png"
+                                                    alt="클로버"><img src="img/klover.png" alt="클로버"></span>
+                                            <span>/</span>
+                                            <span>쉬웠어요</span>
+                                        </div>
+                                    </div>
+                                    <div class="reviewBoxconment">
+                                        작가님의 스토리를 쭉 읽으며 내 삶도 돌아보게 되고, 그러면서 담백한 교훈을 얻을 수 있어서 정말 행복한 독서였습니다. <br>
+                                        좋은 책 써주셔서 정말 감사합니다.
+                                    </div>
+                                    <div class="reviewBoxEmoji">
+                                        <span>20</span>
+                                        <span>답글 0</span>
+                                    </div>
+                                </div>
+                                <div class="reviewTotal">
+                                    <div class="reviewBoxTop">
+                                        <ul class="user">
+                                            <li><span>종이책</span></li>
+                                            <li><span>구매자</span></li>
+                                            <li>sk*****</li>
+                                            <li>|</li>
+                                            <li>2024.03.12</li>
+                                            <li>|</li>
+                                            <li>신고/차단</li>
+                                        </ul>
+                                        <div class="reviewBoxImg">
+                                            <span class="kloverImgBox"><img src="img/klover.png" alt="클로버"><img
+                                                    src="img/klover.png" alt="클로버"><img src="img/klover.png"
+                                                    alt="클로버"><img src="img/klover.png" alt="클로버"></span>
+                                            <span>/</span>
+                                            <span>최고예요</span>
+                                        </div>
+                                    </div>
+                                    <div class="reviewBoxconment">
+                                        "죽은 물고기만이 물결을 따라간다" <br>
+                                        나였네요 그 죽은 물고기가... 그런데 이제 드로우앤드류님의 인공 호흡을 통해 다시 숨이 붙어 자가 호흡을 해보려 합니다!
+                                    </div>
+                                    <div class="reviewBoxEmoji">
+                                        <span>3</span>
+                                        <span>답글 0</span>
+                                    </div>
+                                </div>
+                                <div class="reviewTotal">
+                                    <div class="reviewBoxTop">
+                                        <ul class="user">
+                                            <li><span>종이책</span></li>
+                                            <li><span>구매자</span></li>
+                                            <li>ol******</li>
+                                            <li>|</li>
+                                            <li>2024.03.12</li>
+                                            <li>|</li>
+                                            <li>신고/차단</li>
+                                        </ul>
+                                        <div class="reviewBoxImg">
+                                            <span class="kloverImgBox"><img src="img/klover.png" alt="클로버"><img
+                                                    src="img/klover.png" alt="클로버"><img src="img/klover.png"
+                                                    alt="클로버"><img src="img/klover.png" alt="클로버"></span>
+                                            <span>/</span>
+                                            <span>최고예요</span>
+                                        </div>
+                                    </div>
+                                    <div class="reviewBoxconment">
+                                        미래를 바라볼 수 없던 내게 앞을 내다보고 나아갈 수 있는 방법과 용기를 준 책. <br>
+                                        좋아하는 일로 살고 싶은 사람들이 한번은 읽어봐야 할 책.
+                                    </div>
+                                    <div class="reviewBoxEmoji">
+                                        <span>3</span>
+                                        <span>답글 0</span>
+                                    </div>
+                                </div>
+                                <div class="reviewTotal">
+                                    <div class="reviewBoxTop">
+                                        <ul class="user">
+                                            <li><span>종이책</span></li>
+                                            <li><span>구매자</span></li>
+                                            <li>go****</li>
+                                            <li>|</li>
+                                            <li>2024.03.12</li>
+                                            <li>|</li>
+                                            <li>신고/차단</li>
+                                        </ul>
+                                        <div class="reviewBoxImg">
+                                            <span class="kloverImgBox"><img src="img/klover.png" alt="클로버"><img
+                                                    src="img/klover.png" alt="클로버"><img src="img/klover.png"
+                                                    alt="클로버"><img src="img/klover.png" alt="클로버"></span>
+                                            <span>/</span>
+                                            <span>도움돼요</span>
+                                        </div>
+                                    </div>
+                                    <div class="reviewBoxconment">
+                                        동기부여 되네요!!
+                                    </div>
+                                    <div class="reviewBoxEmoji">
+                                        <span>0</span>
+                                        <span>답글 0</span>
+                                    </div>
+                                </div>
+                                <div class="reviewTotal">
+                                    <div class="reviewBoxTop">
+                                        <ul class="user">
+                                            <li><span>종이책</span></li>
+                                            <li><span>구매자</span></li>
+                                            <li>hi********</li>
+                                            <li>|</li>
+                                            <li>2024.03.12</li>
+                                            <li>|</li>
+                                            <li>신고/차단</li>
+                                        </ul>
+                                        <div class="reviewBoxImg">
+                                            <span class="kloverImgBox"><img src="img/klover.png" alt="클로버"><img
+                                                    src="img/klover.png" alt="클로버"><img src="img/klover.png"
+                                                    alt="클로버"><img src="img/klover.png" alt="클로버"></span>
+                                            <span>/</span>
+                                            <span>집중돼요</span>
+                                        </div>
+                                    </div>
+                                    <div class="reviewBoxconment">
+                                        퍼스널 브랜딩을 배우려는 저에게 굉장하 도움이 되었네요
+                                    </div>
+                                    <div class="reviewBoxEmoji">
+                                        <span>0</span>
+                                        <span>답글 0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewLast">
+                            <img src="img/detail_banner.jpg" alt="리드로그배너">
                         </div>
                     </div>
 
                     <!-- 교환/반품/품절 -->
-                    <div id="refund"></div>
+                    <div id="refund">
+                        <div class="refundTitle">
+                            <h3>교환/반품/품절 안내</h3>
+                            <p>
+                                <button>반품/교환 신청</button>
+                                <button><span></span> 1:1 문의</button>
+                            </p>
+                        </div>
+                        <div class="refundDetail">
+                            <h4>반품/교환방법</h4>
+                            <p>
+                                마이룸 > 주문관리 > 주문/배송내역 > 주문조회 > 반품/교환 신청, [1:1 상담 > 반품/교환/환불] 또는 고객센터 (1544-1900)<br>
+                                * 오픈마켓, 해외배송 주문, 기프트 주문시 [1:1 상담>반품/교환/환불] 또는 고객센터 (1544-1900)
+                            </p>
+                        </div>
+                        <div class="refundDetail">
+                            <h4>반품/교환가능 기간</h4>
+                            <p>
+                                변심반품의 경우 수령 후 7일 이내, <br>
+                                상품의 결함 및 계약내용과 다를 경우 문제점 발견 후 30일 이내
+                            </p>
+                        </div>
+                        <div class="refundDetail">
+                            <h4>반품/교환비용</h4>
+                            <p>
+                                변심 혹은 구매착오로 인한 반품/교환은 반송료 고객 부담
+                            </p>
+                        </div>
+                        <div class="refundDetail">
+                            <h4>반품/교환불가 사유</h4>
+                            <div>
+                                <ol>
+                                    <li>소비자의 책임 있는 사유로 상품 등이 손실 또는 훼손된 경우<br>
+                                        (단지 확인을 위한 포장 훼손은 제외)</li>
+                                    <li>소비자의 사용, 포장 개봉에 의해 상품 등의 가치가 현저히 감소한 경우<br>
+                                        예&#41; 화장품, 식품, 가전제품(악세서리 포함) 등</li>   
+                                    <li>복제가 가능한 상품 등의 포장을 훼손한 경우 <br>
+                                        예&#41; 음반/DVD/비디오, 소프트웨어, 만화책, 잡지, 영상 화보집</li>
+                                    <li>소비자의 요청에 따라 개별적으로 주문 제작되는 상품의 경우 ((1)해외주문도서)</li>
+                                    <li>디지털 컨텐츠인 ebook, 오디오북 등을 1회이상 ‘다운로드’를 받았거나 '바로보기'로 열람한 경우</li>
+                                    <li>시간의 경과에 의해 재판매가 곤란한 정도로 가치가 현저히 감소한 경우</li>
+                                    <li>전자상거래 등에서의 소비자보호에 관한 법률이 정하는 소비자 청약철회 제한 내용에 해당되는 경우</li>    
+                                    <li> 세트상품 일부만 반품 불가 (필요시 세트상품 반품 후 낱권 재구매)</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="refundDetail">
+                            <h4>상품 품절</h4>
+                            <p>
+                                공급사(출판사) 재고 사정에 의해 품절/지연될 수 있으며, 품절 시 관련 사항에 대해서는 이메일과 문자로 안내드리겠습니다.
+                            </p>
+                        </div>
+                        <div class="refundDetail ">
+                            <h4>소비자 피해보상 환불 지연에 따른 배상</h4>
+                            <div>
+                                <ol>
+                                    <li>상품의 불량에 의한 교환, A/S, 환불, 품질보증 및 피해보상 등에 관한 사항은 소비자분쟁 해결 기준 (공정거래위원회 고시)에 준하여 처리됨</li>
+                                    <li>대금 환불 및 환불지연에 따른 배상금 지급 조건, 절차 등은 전자상거래 등에서의 소비자 보호에 관한 법률에 따라 처리함</li>
+                                </ol>
+                            </div>
+                            <span>* 상품 설명에 반품/교환 관련한 안내가 있는 경우 그 내용을 우선으로 합니다. (업체 사정에 따라 달라질 수 있습니다.)</span>
+                        </div>
+
+                    </div>
 
                 </div>
+
+
+
+
                 <!-- 상세페이지 오른쪽 -->
                 <div class="rightSide">
                     <!-- 기분 좋은 발견 -->
@@ -575,14 +957,14 @@
                         </div>
                         <div class="swiper mySwiper find_good">
                             <div class="swiper-wrapper">
-                              <div class="swiper-slide"><img src="img/find1.jpg" alt="배너광고"></div>
-                              <div class="swiper-slide"><img src="img/find2.jpg" alt="배너광고"></div>
-                              <div class="swiper-slide"><img src="img/find3.jpg" alt="배너광고"></div>
-                              <div class="swiper-slide"><img src="img/find4.jpg" alt="배너광고"></div>
-                              <div class="swiper-slide"><img src="img/find5.jpg" alt="배너광고"></div>
+                                <div class="swiper-slide"><img src="img/find1.jpg" alt="배너광고"></div>
+                                <div class="swiper-slide"><img src="img/find2.jpg" alt="배너광고"></div>
+                                <div class="swiper-slide"><img src="img/find3.jpg" alt="배너광고"></div>
+                                <div class="swiper-slide"><img src="img/find4.jpg" alt="배너광고"></div>
+                                <div class="swiper-slide"><img src="img/find5.jpg" alt="배너광고"></div>
                             </div>
                             <div class="swiper-pagination"></div>
-                          </div>
+                        </div>
                     </div>
                     <!-- 이 분야의 베스트 -->
                     <div class="thisBest">
@@ -791,7 +1173,29 @@
         </div>
 
         <!-- 상품금액 -->
-        <div class="priceBox"></div>
+        <div class="priceBox">
+            <div class="container">
+                <div class="totalPrice">
+                    <small>총 상품 금액</small>
+                </div>
+                <div class="fixbtnWrap">
+                     <div class="countBtn">
+                        <span class="fixdown"><img src="img/down.png" alt="마이너스버튼"></span>
+                        <input type="text" value="1">
+                        <span class="fixup"><img src="img/up.png" alt="플러스버튼"></span>
+                     </div>
+                <div class="heart"><img src="img/heart.png" alt="하트"></div>
+                <div class="gift"> <span><img src="img/gift.png" alt="선물"></span>선물하기</div>
+                <div class="fixCart">장바구니</div>
+                <div class="direct">
+                    <a href="#">바로드림</a>
+                    <a href="#">바로구매</a>                  
+                </div>
+                </div>
+               
+
+            </div>
+        </div>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

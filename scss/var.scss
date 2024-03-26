@@ -6,7 +6,11 @@ $green : #6DB329;
 $opacityB : rgba(0, 0, 0, 0.6);
 
 @mixin shadow{
-    box-shadow: 5px 5px 5px #999;}; 
+    box-shadow: 5px 5px 5px #999;};
+
+@mixin underLine{
+    border-bottom: 1px solid #aaa;
+}    
 
 @mixin backGround($url, $position: null) {
     background: {

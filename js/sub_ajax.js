@@ -28,7 +28,7 @@ $.ajax({
 $.ajax({
   method: "GET",
   url: "https://dapi.kakao.com/v3/search/book?target=authors",
-  data: { query: "드로우앤드류", size: 10 },
+  data: { query: "드로우앤드류", size: 30 },
   headers: { Authorization: "KakaoAK 8244a385855c795ceaadd4a47e53aa38" }
 })
   .done(function (msg) {
@@ -36,9 +36,8 @@ $.ajax({
       let data = origin.filter((val) => {
         return val.thumbnail !== "" && val.title !='' && val.authors !='';
       });
-    
-      $('.authorBook').eq(0).append('<a href="#"><img src="' + data[2].thumbnail + '"/></a>');
-      $('.authorBook').eq(0).append('<h5>' + data[2].title + '</h5>');
+      $('.authorBook').eq(0).append('<a href="#"><img src="' + data[3].thumbnail + '"/></a>');
+      $('.authorBook').eq(0).append('<h5>' + data[3].title + '</h5>');
       $('.authorBook').eq(1).append('<a href="#"><img src="' + data[0].thumbnail + '"/></a>');
       $('.authorBook').eq(1).append('<h5>' + data[0].title + '</h5>');
     });
