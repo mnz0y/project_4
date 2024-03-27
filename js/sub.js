@@ -54,25 +54,25 @@ let swiper3 = new Swiper(".find_good", {
 //텍스트파일
 //목차
 $(function () {
-  $.get('../sub_txt/목차.txt', function (data) {
+  $.get('../sub_txt/content.txt', function (data) {
     $('.contentsText').html(data);
   });
 });
 //추천사
 $(function () {
-  $.get('../sub_txt/추천사.txt', function (data) {
+  $.get('../sub_txt/commend.txt', function (data) {
     $('.commandText').html(data);
   });
 });
 //책속으로
 $(function () {
-  $.get('../sub_txt/책속으로.txt', function (data) {
+  $.get('../sub_txt/bookin.txt', function (data) {
     $('.bookInText').html(data);
   });
 });
 //출판사 서평
 $(function () {
-  $.get('../sub_txt/출판사서평.txt', function (data) {
+  $.get('../sub_txt/pub.txt', function (data) {
     $('.publicText').html(data);
   });
 });
