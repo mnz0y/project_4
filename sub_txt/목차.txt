@@ -58,7 +58,3 @@
 우리 모두에게는 안전 공간이 필요하다
 
 에필로그 | 나를 자유롭고 귀하게 키운 지혜</pre>
-
-<div class="foldBtn2">
-       <span class="toText">펼치기</span><span class="arrowDown"></span>
-</div>

@@ -51,7 +51,7 @@ let swiper3 = new Swiper(".find_good", {
 
 
 
-//가져 온 텍스트파일
+//텍스트파일
 //목차
 $(function () {
   $.get('../sub_txt/목차.txt', function (data) {
@@ -103,18 +103,50 @@ $(window).scroll(function () {
 
 //작가정보
 $(function(){
-  $('.foldBtn1').click(function(){
-    let long = $('.aTextbox').css('height' , '350px');
-    let short = $('.aTextbox').css('height' , '50px');
-    if(short){
-      $('.aTextbox').animate({height : '350px'}, 500);
-    $('.authorText .toText').text('접기');
-    $('.authorText .arrowDown').css('backgroundImage','url(../img/morex.png)');
-    }
-    
+  $('.authorText .foldShow').click(function(){
+    $('.aTextbox').animate({height : '350px'}, 500);
+    $(this).hide();
+    $('.authorText .foldHide').show();
   });
- 
+  $('.authorText .foldHide').click(function(){
+    $('.aTextbox').animate({height : '50px'}, 500);
+    $(this).hide();
+    $('.authorText .foldShow').show();
+  });
 });
+
+//목차
+$(function(){
+  $('.contents .foldShow').click(function(){
+    $('.contentsText pre').animate({height : '1250px'}, 800);
+    $('.contents .foldShow').hide();
+    $('.contents .foldHide').show();
+  });
+  $('.contents .foldHide').click(function(){
+    $('.contentsText pre').animate({height : '200px'}, 500);
+    $('.contents .foldHide').hide();
+    $('.contents .foldShow').show();
+  });
+});
+
+//텍스트 슬라이드 토글
+function slideText (textbox,high){
+  $(textbox + ' .foldShow').click(function(){
+    $(textbox+'Text').animate({height : high }, 500);
+    $(textbox +' .foldShow').hide();
+    $(textbox +' .foldHide').show();
+  });
+  $(textbox + ' .foldHide').click(function(){
+    $(textbox+'Text').animate({height : '200px' }, 500);
+    $(textbox +' .foldHide').hide();
+    $(textbox +' .foldShow').show();
+  });
+}
+
+//추천사,책속으로,출판사서평
+slideText('.command','960px');
+slideText('.bookIn', '2040px');
+slideText('.public', '1370px');
 
 //리뷰탭
 $(function () {
@@ -142,6 +174,10 @@ $(function () {
 
   $('.fixdown').click(function () {
     if ($(this).next().val() > 0) {
+      if($(this).next().val() < 2){
+        alert('1권 이상 구매 가능합니다.');
+        $(this).next().val(2);
+      }
       $(this).next().val(parseInt($(this).next().val()) - 1);
       let sum = parseInt($(this).next().val() * priceSum);
       $('.totalPrice span').html('<span><b>' + sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + '</b>원 </span>')
