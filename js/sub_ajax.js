@@ -36,8 +36,8 @@ $.ajax({
       let data = origin.filter((val) => {
         return val.thumbnail !== "" && val.title !='' && val.authors !='';
       });
-      $('.authorBook').eq(0).append('<a href="#"><img src="' + data[3].thumbnail + '"/></a>');
-      $('.authorBook').eq(0).append('<h5>' + data[3].title + '</h5>');
+      $('.authorBook').eq(0).append('<a href="#"><img src="' + data[2].thumbnail + '"/></a>');
+      $('.authorBook').eq(0).append('<h5>' + data[2].title + '</h5>');
       $('.authorBook').eq(1).append('<a href="#"><img src="' + data[0].thumbnail + '"/></a>');
       $('.authorBook').eq(1).append('<h5>' + data[0].title + '</h5>');
     });
